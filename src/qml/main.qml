@@ -5,38 +5,17 @@ import QtQuick.Layouts 1.3
 
 ApplicationWindow {
     visible: true
-    width: 640
-    height: 480
+    width: 360
+    height: 640
     title: qsTr("Hello World")
 
-    SwipeView {
-        id: swipeView
-        anchors.fill: parent
-        currentIndex: tabBar.currentIndex
-
-        Page {
-            Label {
-                text: qsTr("First page")
-                anchors.centerIn: parent
-            }
-        }
-
-        Page {
-            Label {
-                text: qsTr("Second page")
-                anchors.centerIn: parent
-            }
-        }
+    FontLoader {
+        source: "qrc:/fonts/MaterialIcons-Regular.ttf"
     }
 
-    footer: TabBar {
-        id: tabBar
-        currentIndex: swipeView.currentIndex
-        TabButton {
-            text: qsTr("First")
-        }
-        TabButton {
-            text: qsTr("Second")
-        }
+    StackView {
+        anchors.fill: parent
+
+        initialItem: MainMenu {}
     }
 }
