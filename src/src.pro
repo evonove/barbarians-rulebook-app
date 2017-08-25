@@ -1,8 +1,13 @@
-QT += qml quick
+TARGET = barbarians
+QT += qml quick webview
 
 CONFIG += c++11
 
-SOURCES += main.cpp
+SOURCES += \
+    $$PWD/main.cpp
+
+HEADERS += \
+    $$PWD/utils.h
 
 RESOURCES += qml.qrc
 
@@ -27,3 +32,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+
+OTHER_FILES += \
+    $$PWD/qml/*.qml

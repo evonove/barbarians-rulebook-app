@@ -14,8 +14,17 @@ ApplicationWindow {
     }
 
     StackView {
+        id: _stackView
         anchors.fill: parent
 
-        initialItem: MainMenu {}
+        initialItem: MainMenu {
+            onRulebookClicked: _stackView.push(_rulebook)
+        }
+    }
+
+    Component {
+        id: _rulebook
+
+        Rulebook {  }
     }
 }

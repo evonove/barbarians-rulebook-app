@@ -1,3 +1,4 @@
 TEMPLATE = subdirs
 SUBDIRS += \
-    ui
+    ui \
+    utils
