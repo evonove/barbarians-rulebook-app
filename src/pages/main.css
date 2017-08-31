@@ -1,54 +1,16 @@
-html {
-  font-size: 10px;
-}
-
-p {
-  font-size: 2rem;
-  margin-top: 75px;
-}
-
 .container {
-  background: black;
-  display: flex;
+  width: 300px;
 }
 
-.column {
-  flex-direction: column;
+.image {
+  background-color: red;
+  border-radius: 50%;
+  float: left;
+  margin: 0 10px 10px 0;
+  height: 75px;
+  width: 75px;
 }
 
-.box {
-  background: red;
-  height: 50px;
-  margin: 10px;
-  width: 50px;
-}
-
-.stretch > .box {
-  flex: 1;
-}
-
-.align_end {
-  align-items: flex-end;
-  height: 100px;
-  justify-content: flex-end;
-}
-
-.various_sizes {
-  height: 200px;
-}
-
-.various_sizes > .box:nth-of-type(1n) {
-  align-self: flex-start;
-  flex-grow: 3;
-}
-
-.various_sizes > .box:nth-of-type(2n) {
-  background: linear-gradient(to bottom, red 0%, black 100%);
-  align-self: center;
-  flex-grow: 2;
-}
-
-.various_sizes > .box:nth-of-type(3n) {
-  align-self: flex-end;
-  flex-grow: 1;
+.shape {
+  shape-outside: margin-box;
 }
