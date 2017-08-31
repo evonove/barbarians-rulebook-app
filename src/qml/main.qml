@@ -1,13 +1,12 @@
 import QtQuick 2.7
-import QtQuick.Controls 2.0
-import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.2
 
 
 ApplicationWindow {
     visible: true
     width: 360
     height: 640
-    title: qsTr("Hello World")
+    title: qsTr("Barbarians Rulebook")
 
     FontLoader {
         source: "qrc:/fonts/MaterialIcons-Regular.ttf"
@@ -18,13 +17,13 @@ ApplicationWindow {
         anchors.fill: parent
 
         initialItem: MainMenu {
-            onRulebookClicked: _stackView.push(_rulebook)
+           onRulebookClicked: _stackView.push(_rulebook)
         }
-    }
 
-    Component {
-        id: _rulebook
-
-        Rulebook {  }
+        Component {
+            id: _rulebook
+            Rulebook {
+            }
+        }
     }
 }

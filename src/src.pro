@@ -35,4 +35,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 
 OTHER_FILES += \
-    $$PWD/qml/*.qml
+    $$PWD/qml/*.qml \
+    $$PWD/qml/components/*.qml

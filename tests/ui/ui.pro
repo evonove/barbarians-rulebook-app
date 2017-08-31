@@ -1,3 +1,5 @@
 TEMPLATE = subdirs
 SUBDIRS += \
-    mainmenu
+    mainmenu \
+    rulebookheader \
+    webviewsearch
