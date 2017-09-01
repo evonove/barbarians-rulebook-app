@@ -10,6 +10,7 @@
         <file>pages/rulebook.html</file>
         <file>pages/findAndReplaceDOMText.js</file>
         <file>pages/searchAPI.js</file>
+        <file>pages/vendors/normalize.css</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>
