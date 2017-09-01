@@ -11,6 +11,8 @@
         <file>pages/findAndReplaceDOMText.js</file>
         <file>pages/searchAPI.js</file>
         <file>pages/vendors/normalize.css</file>
+        <file>pages/images/rulebook/main-background.jpg</file>
+        <file>pages/images/rulebook/introduction/introduction-heading.png</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>
