@@ -6,11 +6,15 @@ import "components"
 Page {
     id: root
 
+    property alias rulebookUrl: _webView.url
+
     padding: 0
 
     header: RulebookHeader {
         total: _webView.elementsFound
         current: _webView.currentElement
+
+        onBackButtonClicked: root.StackView.view.pop()
 
         onSearchTextChanged: _webView.find(text)
         onNextButtonClicked: _webView.next()
@@ -22,6 +26,5 @@ Page {
         id: _webView
 
         anchors.fill: parent
-        url: baseUrl
     }
 }

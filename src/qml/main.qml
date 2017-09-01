@@ -1,6 +1,10 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.2
 
+// we need to explictly import the style used
+// because otherwise static build won't find it
+import QtQuick.Controls.Material 2.2
+
 
 ApplicationWindow {
     visible: true
@@ -23,6 +27,7 @@ ApplicationWindow {
         Component {
             id: _rulebook
             Rulebook {
+               rulebookUrl: baseUrl
             }
         }
     }

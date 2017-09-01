@@ -12,24 +12,33 @@ WebView {
         root.currentElement = 0;
 
         root.runJavaScript("init()");
+        console.debug("search init call");
     }
 
     function find(text) {
         root.runJavaScript("find('%1')".arg(text), function(result) {
-            root.elementsFound = result.elementsFound;
-            root.currentElement = result.currentElement + 1;
+            console.debug("search find call", result);
+
+            root.elementsFound = result;
+        });
+        root.runJavaScript("current()", function(result) {
+            root.currentElement = result + 1;
         });
     }
 
     function next() {
         root.runJavaScript("next()", function(result) {
+            console.debug("search next call", result);
+
             root.currentElement = result + 1;
         });
     }
 
     function prev() {
         root.runJavaScript("prev()", function(result) {
-            root.currentElement = result + 1;
+            console.debug("search prev call", result);
+
+            root.currentElement = parseInt(result) + 1;
         });
     }
 }

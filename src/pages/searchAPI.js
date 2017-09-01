@@ -45,11 +45,12 @@
         // call next to move to the first result
         next();
 
-        return {
-            elementsFound: instance.elements.length,
-            currentElement: current
-        };
+        return instance.elements.length;
     };
+
+    root.current = function() {
+        return current;
+    }
 
     root.next = function() {
         if (instance && instance.elements.length > 0) {
