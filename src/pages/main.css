@@ -69,6 +69,14 @@ h2 {
 
 img {
   max-width: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Align bullets to content
+ */
+ul {
+  padding-left: 1rem;
 }
 
 
@@ -82,20 +90,67 @@ img {
 .rulebook {
   background: url('images/rulebook/main-background.jpg') no-repeat fixed;
   background-size: 100% 100%;
-  padding: 1rem;
+  padding: 4.236rem 1rem;
 }
 
-.chapter {
-  padding-top: 4.236rem;
+/**
+ * Add space between chapters, starting from the second one.
+ */
+.chapter + .chapter {
+  padding-top: 6.854rem;
 }
 
-.article {
+.inner_content {
   margin-top: 2.618rem;
 }
 
 /**
- * Set paragraphs flow
+ * Set a vertical flow to the content
  */
-.article > * + p {
+.inner_content > * + * {
   margin-top: 1rem;
 }
+
+/* Note element
+ **************/
+.note {
+  background: linear-gradient(to right, rgba(156,105,30,1) 0%, rgba(156,105,30,0) 90%);
+  font-style: italic;
+  padding: 0.368rem 1rem;
+  position: relative;
+}
+
+/**
+ * Create the border as background so that we can handle the gradient
+ */
+.note::before {
+  background: linear-gradient(to right, rgba(170,154,134,1) 0%, rgba(170,154,134,0) 90%);
+  bottom: 2px;
+  content: '';
+  left: 2px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+
+.note > p {
+  position: relative;
+}
+
+/* Image example element
+ ***********************/
+.image_example {
+  background: linear-gradient(to right, rgba(156,105,30,1) 0%, rgba(156,105,30,0) 90%);
+  padding: 2px;
+}
+
+/**
+ * [1] Remove an unneeded dark brown line
+ */
+.image_example-caption {
+  background: linear-gradient(to right, rgba(170,154,134,1) 0%, rgba(170,154,134,0) 90%);
+  margin-top: -1px; /* [1] */
+  padding: 0.368rem 1rem;
+}
+
+

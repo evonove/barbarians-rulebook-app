@@ -20,6 +20,8 @@
         <file>pages/fonts/TrajanPro-Bold.woff</file>
         <file>pages/images/rulebook/main-background.jpg</file>
         <file>pages/images/rulebook/introduction/introduction-heading.png</file>
+        <file>pages/images/rulebook/game_flow/gameflow-heading.png</file>
+        <file>pages/images/rulebook/game_flow/maintenance.jpg</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>
