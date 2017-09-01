@@ -11,6 +11,13 @@
         <file>pages/findAndReplaceDOMText.js</file>
         <file>pages/searchAPI.js</file>
         <file>pages/vendors/normalize.css</file>
+        <file>pages/fonts/Immortal.woff</file>
+        <file>pages/fonts/RobotoCondensed-Bold.woff</file>
+        <file>pages/fonts/RobotoCondensed-BoldItalic.woff</file>
+        <file>pages/fonts/RobotoCondensed-Italic.woff</file>
+        <file>pages/fonts/RobotoCondensed-Regular.woff</file>
+        <file>pages/fonts/TrajanPro-Regular.woff</file>
+        <file>pages/fonts/TrajanPro-Bold.woff</file>
         <file>pages/images/rulebook/main-background.jpg</file>
         <file>pages/images/rulebook/introduction/introduction-heading.png</file>
         <file>qtquickcontrols2.conf</file>
