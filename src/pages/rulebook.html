@@ -15,7 +15,7 @@
         <figure class="h1">
           <img src="images/rulebook/introduction/introduction-heading.png" alt="Introduction">
         </figure>
-        <div class="inner_content">
+        <article class="inner_content">
           <p>1-4 Players, Age 14+, 90 minutes</p>
           <p>
             Enter the mysterious World of Fenian, a place where barbarian clans rule wild lands and corrupted civilizations live in decaying cities - a place filled with powers gifted by ancient gods and treacherous demons.
@@ -29,28 +29,28 @@
           <p>
             Only the strongest clan will prevail on the path to glory, leaving its mark in history.
           </p>
-        </div>
-        <div class="inner_content">
+        </article>
+        <article id="goal_of_game" class="inner_content">
           <h2>Goal of the Game</h2>
           <p>
             Use your Champions to gather resources, construct Buildings, pray to Gods and lead your troops in battle to conquer civilized regions. In the end, the player with the most Domination points wins.
           </p>
-        </div>
+        </article>
       </section>
 
       <section id="game_flow" class="chapter">
         <figure class="h1">
           <img src="images/rulebook/game_flow/gameflow-heading.png" alt="Game Flow">
         </figure>
-        <div class="inner_content">
+        <article class="inner_content">
           <p>
             The game lasts a maximum of 6 Eras, with each Era running the same way.<br>
             1st. Maintenance Phase<br>
             2nd. Action Phase<br>
             3rd. End Phase<br>
           </p>
-        </div>
-        <div class="inner_content">
+        </article>
+        <article id="maintenance" class="inner_content">
           <h2>1st Phase: Maintenance</h2>
           <div class="note">
             <p>Note: Skip this phase in the first Era of the game.</p>
@@ -70,7 +70,450 @@
               Example: Red has two Buildings and only one Production Knowledge. Therefore, they choose one of their two Buildings and gain the resources indicated.
             </figcaption>
           </figure>
-        </div>
+        </article>
+        <article id="action" class="inner_content">
+          <h2>2nd Phase: Action</h2>
+          <ul class="list">
+            <li>
+              Players take turns following their order on the Honor track.
+            </li>
+            <li>
+              In your turn, place one of your Champions on an unoccupied action space of the Volcano, and you may perform the indicated action.
+            </li>
+          </ul>
+          <div class="note_image">
+            <div class="note">
+              <p>Action spaces are marked with this outline.</p>
+            </div>
+            <img class="icon" src="images/rulebook/game_flow/placeholder-volcano.png" alt="Action spaces">
+          </div>
+          <article class="inner_subcontent">
+            <h5>Allowed placements:</h5>
+            <p>
+              If it is your first Champion, place it on an action space of the central ring.<br>
+              If it is your second Champion, place it on an action space of the intermediate ring, but only in one of the two sectors directly linked to the sector your first Champion occupies.<br>
+              If it is your third Champion, place it on an action space of the external ring, but only in one of the two sectors directly linked to the sector your second Champion occupies.<br>
+              Some effects may allow you to place a fourth Champion. Place your fourth Champion on an action space of one of the peripheral sectors directly linked to the sector your third Champion occupies.
+            </p>
+            <div class="note">
+              <p>
+                Note: In the remote case you cannot place your Champion due to a lack of free action spaces, simply skip your turn and gain 2 Domination Points.
+              </p>
+            </div>
+            <figure class="image">
+              <img src="images/rulebook/game_flow/volcano.png" alt="Maintenance">
+            </figure>
+          </article>
+          <article class="inner_subcontent">
+            <h6>Pray to a God or Sacrifice a Warchief:</h6>
+            <p>
+              During your turn, before or after placing a Champion, you can decide to pray to one of your Gods or to sacrifice one of your Warchiefs.
+            </p>
+            <p>
+              <b>Pray to a God:</b> You can pray to one of your Gods to help you out. During your turn, before or after placing a Champion, you can activate one of your God cards rotating it horizontally to immediately resolve the effect depicted on the bottom of the card.
+            </p>
+            <p>
+              <b>Sacrifice a Warchief:</b> During your turn, before or after placing a Champion, sacrifice one Warchief to immediately resolve the effect depicted on the bottom-right of that card. Then discard the Warchief card to the bottom of the Warchief deck.
+            </p>
+            <div class="note">
+              <p>
+                Note: in a single turn you can only pray to one God or sacrifice one Warchief.<br>
+                You cannot pray to two or more Gods, sacrifice two or more Warchiefs, or both pray to a God and sacrifice a Warchief in the same turn.<br>
+                You cannot sacrifice an activated Warchief.
+              </p>
+            </div>
+          </article>
+          <article id="action_spaces" class="inner_subcontent">
+            <h3>The Action Spaces:</h3>
+            <article id="gaining_resources" class="inner_subcontent">
+              <h4>Gaining Resources</h4>
+              <p>
+                Keep track of your resources by moving the position of the corresponding token. If you gain 1 resource, move the token 1 step right on that resource track. When you pay 1 resource, move it 1 step left. You can never exceed the limit of 6 of any kind of resource.
+                You can never pay a resource you don’t have.
+              </p>
+              <ul class="icons_list">
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/gaining-resources-1.png" alt="Gaining resources icon">
+                  <p>Gain 1 Food, 1 Wood and 1 Iron.</p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/gaining-resources-2.png" alt="Gaining resources icon">
+                  <p>Gain 1 Stone, 1 Gold and 2 Domination points.</p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/gaining-resources-3.png" alt="Gaining resources icon">
+                  <p>Gain 2 of the resource indicated.</p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/gaining-resources-4.png" alt="Gaining resources icon">
+                  <p>Gain 3 of the resource indicated.</p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/gaining-resources-5.png" alt="Gaining resources icon">
+                  <p>Gain 1 Food, 1 Wood, 1 Iron, 1 Stone and 1 Gold.</p>
+                </li>
+              </ul>
+            </article>
+            <article id="erect_building" class="inner_subcontent">
+              <div class="heading_icon">
+                <h4 class="heading_icon-heading">Erect a Building</h4>
+                <img class="icon" src="images/rulebook/game_flow/building.png" alt="Erect a Building icon">
+              </div>
+              <p>
+                Choose one of the Building cards from the display, and pay the resources indicated on the top-left corner. Place the building card face up in front of you. If you have more than 4 Building cards, you must immediately discard one to the bottom of the Building deck.
+              </p>
+            </article>
+            <article id="invoke" class="inner_subcontent">
+              <div class="heading_icon">
+                <h4 class="heading_icon-heading">Invoke one God OR invoke one Warchief</h4>
+                <img class="icon" src="images/rulebook/game_flow/god-warchief.png" alt="Erect a Building icon">
+              </div>
+              <div class="text_around_image_left">
+                <img class="icon" src="images/rulebook/game_flow/god.png" alt="Invoke one God icon">
+                <p>
+                  <b>Invoke one God</b><br>
+                  Choose one of the God cards from the display, and pay 1 resource of your choice as indicated on the top-left corner. Gain the Domination Points indicated on the
+                  top-right corner of the card. Place the God card face up in front of you in the vertical position. If you have more than 3 God cards, you must discard one to the bottom of the Gods deck without resolving any effect.
+                </p>
+              </div>
+              <div class="text_around_image_left">
+                <img class="icon" src="images/rulebook/game_flow/warchief.png" alt="Invoke one Warchief icon">
+                <p>
+                  <b>Invoke one Warchief</b><br>
+                  Choose one of the Warchief cards from the display, and pay 2 Gold resources as indicated on the top-left corner.
+                  Advance your counter on the Honor Track by the amount of crowns on the top-right corner of the card. (1 crown = 1 step, 2 crowns = 2 steps...).
+                  Put the Warchief card in front of you in vertical position. If you have more than 3 Warchief cards, you must discard one to the bottom of the Warchiefs deck without resolving any effect or sacrificing it.
+                </p>
+              </div>
+              <p>
+                <b>Milestones</b><br>
+                Whenever your Honor counter advances past one or more Milestones on the Honor track, you immediately gain the bonuses indicated.
+              </p>
+              <div class="note">
+                <p>
+                  Note: A player gains the Milestone bonus only the first time he advances past it.<br>
+                  Other players can still gain that bonus.
+                </p>
+              </div>
+            </article>
+            <article id="war" class="inner_subcontent">
+              <div class="heading_icon">
+                <h4 class="heading_icon-heading">War</h4>
+                <img class="icon" src="images/rulebook/game_flow/war.png" alt="War icon">
+              </div>
+              <p>
+                First, you can recruit troops.<br>
+                Pay the amount of resources indicated next to the troop you wish to recruit (see your player gameboard) to gain 1 troop of that type. You can recruit troops until you are satisfied or you run out of resources.<br>
+                Keep track of your troops in the same way you keep track of resources.<br>
+                You can never have more than 6 troops of each kind.
+              </p>
+              <div class="note">
+                <p>
+                  Note: The back of the Region cards shows the troops required to fight in the various regions. (e.g. To fight in a Forest region, you need Berserkers and Raiders, and Berserkers are more necessary than Raiders).
+                </p>
+              </div>
+              <figure class="image_example">
+                <img src="images/rulebook/game_flow/war-1.jpg" alt="War example #1">
+                <figcaption class="image_example-caption">
+                  Example: Red performs a War action and plans to attack a Glacier region. The back of the Glacier cards suggests that Raiders and Archers will be required. Red recruits troops accordingly.<br>
+                  A) They spend 2 Food and 2 Iron to recruit two Raiders;<br>
+                  B) They spend 1 Food and 1 Wood to recruit one Archer.
+                </figcaption>
+              </figure>
+              <p>
+                After recruitment, you can declare war on the region you wish to conquer. You can attack a region respecting <b>all</b> the following conditions:
+              </p>
+              <ul class="list">
+                <li>
+                  The region is adjacent to an already conquered region - it doesn’t matter if it was conquered by you or by another player - or to the starting region (The starting region is the region on the top-left corner of the Map with a volcano depicted on it).
+                </li>
+                <li>
+                  Your Discovery Knowledge is sufficient to explore the island where that region is located (see paragraph Barbarians Knowledge).
+                </li>
+                <li>
+                  The region has a Faction token on it.
+                </li>
+              </ul>
+              <figure class="image_example">
+                <img src="images/rulebook/game_flow/war-2.jpg" alt="War example #2">
+                <figcaption class="image_example-caption">
+                  Example: Red player has two Discovery Knowledge points, so they can attack only the regions of Fenian, Aaruwn, or Boenhoor, that are adjacent to already conquered regions (or to the starting region), and that contain a faction token.
+                </figcaption>
+              </figure>
+              <p>
+                Once you have determined the region you want to attack, pick up and shuffle the corresponding Region deck.<br>
+                Each card represents a battle in the corresponding region, and the total number of battles you face is determined by your Tactics Knowledge of the faction token present in that region.<br>
+                If you have no Tactics Knowledge of the attacked Faction, you must face 6 battles.
+              </p>
+              <figure class="image_example">
+                <img src="images/rulebook/game_flow/war-3.jpg" alt="War example #3">
+                <figcaption class="image_example-caption">
+                  Example: Red is attacking the Nefriar faction and they have two Tactics Knowledge points on the Nefriar faction, so they have to face a total of 4 battles. (See Tactics Knowledge).
+                </figcaption>
+              </figure>
+              <p>
+                Now reveal one card from the Region deck. Each card depicts how many, and which type, of troops you need to pay to win the battle.<br>
+                If you pay up that number of troops, you win the battle and reveal the next card.<br>
+                <b>Call on a Warchief:</b> Instead of paying from your player board, you can rotate a Warchief card into the horizontal position to use the troop indicated in the bottom-left corner of the Warchief card.
+              </p>
+              <div class="note">
+                <p>
+                  Note: You can call on more than one Warchief during the same battle, but each Warchief can be called on only once per Era.
+                </p>
+              </div>
+              <p>
+                If you don’t want to, or cannot, pay the troops required to win a battle, you immediately suffer a penalty, which depends on the faction you are facing:
+              </p>
+              <ul class="icons_list">
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/war-icon-1.png" alt="Nefriar faction icon">
+                  <p>
+                    Nefriar faction<br>
+                    Pay 1 troop of any kind and lose 1 Domination point. If you cannot pay a troop, you lose 1 additional Domination point.
+                  </p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/war-icon-2.png" alt="Shan faction icon">
+                  <p>
+                    Shan faction<br>
+                    Pay 1 Gold and 1 Stone. For each resource you cannot pay, you lose 1 Domination point.
+                  </p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/war-icon-3.png" alt="Aspidian faction icon">
+                  <p>
+                    Aspidian faction<br>
+                    Move your Honor counter back 2 steps. When your counter is on the “0” space of the Honor track, you lose 1 Domination point for each step back you cannot take.
+                  </p>
+                </li>
+              </ul>
+              <div class="note">
+                <p>
+                  Note: you don’t gain any eventual Milestone bonuses you pass in this way.
+                </p>
+              </div>
+              <ul class="icons_list">
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/war-icon-4.png" alt="Varg faction icon">
+                  <p>
+                    Varg faction<br>
+                    Rotate horizontally 2 cards in front of you, either Gods or Warchiefs. For each card you cannot rotate horizontally, you lose 1 Domination point.
+                  </p>
+                </li>
+              </ul>
+              <div class="note">
+                <p>
+                  Note: If you have a token on the Defense Knowledge track, you may use it to avoid taking one penalty. (See Defense Knowledge).
+                </p>
+              </div>
+              <p>
+                <b>Rewards:</b> Some cards have a reward indicated on the bottom-left corner of the card.
+                At the end of a war, collect the rewards of the battles you won.
+              </p>
+              <p>
+                <b>Overkill:</b> Some cards indicate that you can pay additional troops (highlighted in red). You don’t need to pay these troops to win that battle, but if you do pay the troops required and all the additional troops, you immediately gain the Domination points indicated on the bottomright corner.
+              </p>
+              <figure class="image_example">
+                <img src="images/rulebook/game_flow/war-4.jpg" alt="War example #4">
+                <figcaption class="image_example-caption">
+                  Example: To win this battle, Red must pay 2 Raider troops. Additionally, they may pay 1 Archer to perform an overkill and immediately gain 3 Domination points. Either way, the battle is won, so at the end of this War they will gain a Gold resource.
+                </figcaption>
+              </figure>
+              <p>
+                Once you have faced all the battles, two outcomes are possible.
+              </p>
+              <ul class="list alpha_list">
+                <li>
+                  If you won at least half of the battles rounded up, then you conquer the region.<br>
+                  Take the Faction token of that region and put it in front of you, then place one of your Banners in that region. You immediately score Domination points equal to the number indicated on the Faction token plus Domination points related to the island where you fought (see Map). If you are the first player to conquer a region in that island, take the First Conquer tile of that island to score 3 additional Domination points.
+                </li>
+                <li>
+                  If you didn’t win at least half of the total battles, you do not conquer that region; but you still gain eventual rewards for the battles you won.
+                </li>
+              </ul>
+              <div class="note">
+                <p>
+                  Note: You can conquer a maximum of 8 regions per game.
+                </p>
+              </div>
+              <figure class="image_example">
+                <img src="images/rulebook/game_flow/war-5.jpg" alt="War example #5">
+                <figcaption class="image_example-caption">
+                  Example: Red won two battles out of four. Since they have won half of the battles, they win the war. They take the Nefriar Faction token from the region and place their Banner. They score 3 Domination points (as indicated on the Faction token) + 2 Domination points (as indicated next to Boenhoor island). Since they aren’t the first player to conquer a region in this island, they don’t gain the 3 Domination points from the First Conquer tile.
+                </figcaption>
+              </figure>
+            </article>
+            <article id="knowledge" class="inner_subcontent">
+              <h4>Knowledge Tracks</h4>
+              <div class="images_in_text">
+                <span>For each </span>
+                <img class="small_icon" src="images/rulebook/game_flow/barbarians-knowledge.png" alt="Barbarians knowledge icon">
+                <span>,</span>
+                <img class="small_icon" src="images/rulebook/game_flow/tactics-knowledge.png" alt="Tactics knowledge icon">
+                <span>
+                  advance one of your discs on a Knowledge track by 1 step or place one of your Knowledge discs on the leftmost space of a track where you are not already present.<br>
+                  There are two different types of tracks, Barbarians and Tactics. Barbarians Knowledge refers to technologies and improves different aspects of your clan. Tactics Knowledge is useful to conquer Faction tokens with less effort.
+                </span>
+              </div>
+              <article class="inner_subcontent">
+                <div class="text_image_inline">
+                  <img class="icon" src="images/rulebook/game_flow/barbarians-knowledge.png" alt="Barbarians knowledge icon">
+                  <p class="u-trajan_font">Barbarians Knowledge</p>
+                </div>
+                <div class="text_around_image_right">
+                  <img class="icon" src="images/rulebook/game_flow/discovery-icon.png" alt="Discovery icon">
+                  <p>
+                    <b>Discovery Track:</b> This track extends the range of regions you can attack. If you have no Discovery Knowledge points, you can attack only regions of the starting island. When your disc is on the first space of this track, you can also attack regions of Aaruwn isle. The second space lets you reach the Boenhoor isle and so on.
+                  </p>
+                </div>
+                <p>
+                  <u>Bonus:</u> The first player who reaches the last space of this track immediately gains Domination points equal to the number of Faction tokens they’ve collected multiplied by two; the second player who reaches the last space multiplies that by one.
+                </p>
+                <div class="text_around_image_right">
+                  <img class="icon" src="images/rulebook/game_flow/defense-icon.png" alt="Defense icon">
+                  <p>
+                    <b>Defense Track:</b> This track allows you to avoid penalties from losing a battle. You can only avoid one penalty during a single war. You can decide when to avoid that penalty based on where your disc is (i.e.: if you are in the first space of the Defense track, you can avoid it only for the first battle; if you are in the second space, only for one of the first two battles, and so on).
+                  </p>
+                </div>
+                <p>
+                  <u>Bonus:</u> The first player who reaches the last space of this track immediately gains Domination points equal to the number of Milestones they’ve reached multiplied by two; the second player who reaches the last space multiplies that by one.
+                </p>
+                <div class="text_around_image_right">
+                  <img class="icon" src="images/rulebook/game_flow/economy-icon.png" alt="Economy icon">
+                  <p>
+                    <b>Economy Track:</b> For every step on this track, you gain more resources when you perform resource actions on the Volcano. If you are on the first space, you gain 1 additional Food every time you gain at least 1 Food from an action. If you are on the second step, you also gain 1 additional Wood every time you gain at least 1 Wood from an action. If you are on the third step, you also gain 1 additional Iron every time you gain at least 1 Iron from an action. If you are on the last step, you also gain 1 additional Stone every time you gain at least 1 Stone from an action.
+                  </p>
+                </div>
+                <p>
+                  <u>Bonus:</u> The first player who reaches the last space of this track immediately gains Domination points equal to every different triplet of Food, Wood and Iron they have, multiplied by two; the second player who reaches the last space multiplies that by one.
+                </p>
+                <div class="note">
+                  <p>
+                    Note: You don’t have to spend the resources to score these Domination points.
+                  </p>
+                </div>
+                <div class="text_around_image_right">
+                  <img class="icon" src="images/rulebook/game_flow/production-icon.png" alt="Production icon">
+                  <p>
+                    <b>Production Track:</b> For every step on this track, you can activate a different Building during the Maintenance Phase. If you are on the first space, you can activate 1 Building card during the Maintenance Phase; if you are on the second space, you can activate 2 different Buildings during the Maintenance Phase, and so on.
+                  </p>
+                </div>
+                <p>
+                  <u>Bonus:</u> The first player who reaches the last space of this track immediately gains Domination points equal to every Building card in front of them multiplied by two; the second player who reaches the last space multiplies that by one.
+                </p>
+              </article>
+              <article class="inner_subcontent">
+                <div class="text_image_inline">
+                  <img class="icon" src="images/rulebook/game_flow/tactics-knowledge.png" alt="Tactics knowledge icon">
+                  <p class="u-trajan_font">Tactics Knowledge</p>
+                </div>
+                <div class="note">
+                  <ul class="note_icons_list">
+                    <li>
+                      <img class="icon" src="images/rulebook/game_flow/war-icon-1.png" alt="Nefriar faction icon">
+                    </li>
+                    <li>
+                      <img class="icon" src="images/rulebook/game_flow/war-icon-2.png" alt="Shan faction icon">
+                    </li>
+                    <li>
+                      <img class="icon" src="images/rulebook/game_flow/war-icon-3.png" alt="Aspidian faction icon">
+                    </li>
+                    <li>
+                      <img class="icon" src="images/rulebook/game_flow/war-icon-4.png" alt="Varg faction icon">
+                    </li>
+                  </ul>
+                </div>
+                <p>
+                  Each track is related to one of the four factions and works in the same way, except for the bonus for reaching the last space.
+                  For every step on these tracks, you reduce the number of battles you have to fight in a war against a specific faction.
+                </p>
+                <div class="note">
+                  <p>
+                    Example: If your disc is on the first space of the Aspidian faction Tactics Knowledge track, every time you attack Aspidian you will face 5 total battles. If your token is on the second
+                    space of the Aspidian faction Tactics Knowledge track, you will face 4 total battles.
+                  </p>
+                </div>
+                <p>
+                  If you declare war on a particular faction where you don’t have a disc on the corresponding Tactics Knowledge track, you will fight a total of 6 battles.
+                </p>
+                <p>
+                  <u>Bonus:</u> The first player who reaches the last space of the Nefriar faction track immediately recruits 3 troops of their choice <b>and</b> gains 3 Domination points; the second player who reaches the last space chooses <b>either</b> one of the two bonuses.
+                </p>
+                <p>
+                  <u>Bonus:</u> The first player who reaches the last space of the Shan faction track immediately gains 4 resources of their choice <b>and</b> gains 3 Domination points; the second player who reaches the last space chooses <b>either</b> one of the two bonuses.
+                </p>
+                <p>
+                  <u>Bonus:</u> The first player who reaches the last space of the Aspidian faction track immediately advances 2 spaces on the Honor track <b>and</b> gains 3 Domination points; the second player who reaches the last space chooses <b>either</b> one of the two bonuses.
+                </p>
+                <p>
+                  <u>Bonus:</u> The first player who reaches the last space of the Varg faction track immediately picks up the top-most card from either the God deck or the Warchief deck without paying its cost <b>and</b> gains 3 Domination points; the second player who reaches the last space chooses <b>either</b> one of the two bonuses.
+                </p>
+              </article>
+            </article>
+            <article id="other_actions" class="inner_subcontent">
+              <h4>Other Actions</h4>
+              <ul class="icons_list">
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/other-actions-1.png" alt="Other action #1">
+                  <p>
+                    On your next turn, you may perform up to two times the effect of the action space where you place your third Champion.
+                  </p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/other-actions-2.png" alt="Other action #2">
+                  <p>
+                    During this Era, you gain a fourth Champion to place later on the fourth ring.
+                  </p>
+                </li>
+              </ul>
+              <div class="note">
+                <p>
+                  Note: You cannot have more than 4 Champions in each Era.
+                </p>
+              </div>
+            </article>
+            <article id="trade_actions" class="inner_subcontent">
+              <h4>Trade Actions</h4>
+              <ul class="icons_list">
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/trade-1.png" alt="Trade action #1">
+                  <p>
+                    Pay 2 Food to advance 1 space on the Barbarians Knowledge and 1 space on the Tactics Knowledge track, and advance your Honor counter by 1 space.
+                  </p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/trade-2.png" alt="Trade action #2">
+                  <p>
+                    Pay 2 Wood to draw the top card of the Building deck without paying its cost.
+                  </p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/trade-3.png" alt="Trade action #3">
+                  <p>
+                    Pay 2 Iron to draw the top card of the Warchief or God deck, without paying its cost.
+                  </p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/trade-4.png" alt="Trade action #4">
+                  <p>
+                    Pay 2 Stone to gain 3 troops of your choice.
+                  </p>
+                </li>
+                <li class="icons_list-item">
+                  <img class="icon" src="images/rulebook/game_flow/trade-5.png" alt="Trade action #5">
+                  <p>
+                    Pay 2 Gold to perform a War action. If you win the war, double the Domination points on the Faction token you gain.
+                  </p>
+                </li>
+              </ul>
+              <div class="note">
+                <p>
+                  Note: First Conquer tiles and additional Domination points of the island are not doubled.
+                </p>
+              </div>
+            </article>
+          </article>
+        </article>
       </section>
     </main>
   </div>

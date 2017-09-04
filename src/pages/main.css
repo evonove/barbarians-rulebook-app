@@ -1,7 +1,7 @@
 /* RESET STYLES
    ========================================================*/
 
-h1, h2, h3, h4, h5, p, figure {
+h1, h2, h3, h4, h5, h6, p, figure {
   margin: 0;
 }
 
@@ -67,6 +67,26 @@ h2 {
   font-weight: bold;
 }
 
+h3 {
+  color: #9C691E;
+  font-family: Immortal;
+}
+
+h4 {
+  border-bottom: 1px solid black;
+  font-family: Trajan Pro;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.618rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -80,7 +100,15 @@ ul {
 }
 
 
-/* LAYOUT
+/* UTILITIES STYLES
+   ========================================================*/
+.u-trajan_font {
+  font-family: Trajan Pro;
+  font-weight: bold;
+}
+
+
+/* LAYOUT ELEMENTS
    ========================================================*/
 
 .container {
@@ -104,15 +132,125 @@ ul {
   margin-top: 2.618rem;
 }
 
+.inner_subcontent {
+  margin-top: 1.618rem;
+}
+
 /**
- * Set a vertical flow to the content
+ * Set a vertical flow to textual and graphic content
  */
-.inner_content > * + * {
+.inner_content > * + *:not(.inner_subcontent),
+.inner_subcontent > * + *:not(.inner_subcontent) {
   margin-top: 1rem;
 }
 
+/* Images
+ *********/
+.image {
+  margin-top: 1.618rem;
+}
+
+.icon {
+  max-width: 75px;
+  width: 100%;
+}
+
+.small_icon {
+  width: 25px;
+}
+
+/* Image example element
+ ************************/
+.image_example {
+  background: linear-gradient(to right, rgba(156,105,30,1) 0%, rgba(156,105,30,0) 90%);
+  padding: 2px;
+}
+
+/* Text and image inline element
+ ********************************/
+.text_image_inline {
+  align-items: center;
+  display: flex;
+}
+
+/**
+ * Add a space between image and text, regardless of their order.
+ */
+.text_image_inline > *:last-child {
+  margin-left: 1rem;
+}
+
+/* Text wrapped around image element
+ ************************************/
+
+/**
+ * Image is positioned to the left
+ */
+.text_around_image_left > img {
+  float: left;
+  margin-right: 1rem;
+  shape-outside: circle();
+}
+
+/**
+ * Image is positioned to the right
+ */
+.text_around_image_right > img {
+  float: right;
+  margin-left: 1rem;
+  shape-outside: circle();
+}
+
+/**
+ * [1] Remove an unneeded dark brown line
+ */
+.image_example-caption {
+  background: linear-gradient(to right, rgba(170,154,134,1) 0%, rgba(170,154,134,0) 90%);
+  margin-top: -1px; /* [1] */
+  padding: 0.368rem 1rem;
+  position: relative;
+}
+
+/* Heading with icon element
+ ****************************/
+.heading_icon {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading_icon-heading {
+  width: 100%;
+}
+
+/* List element
+ ***************/
+.alpha_list {
+  list-style-type: upper-alpha;
+}
+
+/* Icons list element
+ *********************/
+.icons_list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.icons_list-item {
+  align-items: center;
+  display: flex;
+}
+
+.icons_list-item + .icons_list-item {
+  margin-top: 1rem;
+}
+
+.icons_list-item > p {
+  margin-left: 1rem;
+}
+
 /* Note element
- **************/
+ ***************/
 .note {
   background: linear-gradient(to right, rgba(156,105,30,1) 0%, rgba(156,105,30,0) 90%);
   font-style: italic;
@@ -137,20 +275,32 @@ ul {
   position: relative;
 }
 
-/* Image example element
- ***********************/
-.image_example {
-  background: linear-gradient(to right, rgba(156,105,30,1) 0%, rgba(156,105,30,0) 90%);
-  padding: 2px;
+.note_icons_list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Note with image element
+ **************************/
+.note_image {
+  display: flex;
+  position: relative;
+}
+
+.note_image > .note > p {
+  width: 75%;
 }
 
 /**
- * [1] Remove an unneeded dark brown line
+ * Position the image to the note's vertical center
  */
-.image_example-caption {
-  background: linear-gradient(to right, rgba(170,154,134,1) 0%, rgba(170,154,134,0) 90%);
-  margin-top: -1px; /* [1] */
-  padding: 0.368rem 1rem;
+.note_image > img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
-

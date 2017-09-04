@@ -22,6 +22,40 @@
         <file>pages/images/rulebook/introduction/introduction-heading.png</file>
         <file>pages/images/rulebook/game_flow/gameflow-heading.png</file>
         <file>pages/images/rulebook/game_flow/maintenance.jpg</file>
+        <file>pages/images/rulebook/game_flow/placeholder-volcano.png</file>
+        <file>pages/images/rulebook/game_flow/volcano.png</file>
+        <file>pages/images/rulebook/game_flow/gaining-resources-1.png</file>
+        <file>pages/images/rulebook/game_flow/gaining-resources-2.png</file>
+        <file>pages/images/rulebook/game_flow/gaining-resources-3.png</file>
+        <file>pages/images/rulebook/game_flow/gaining-resources-4.png</file>
+        <file>pages/images/rulebook/game_flow/gaining-resources-5.png</file>
+        <file>pages/images/rulebook/game_flow/building.png</file>
+        <file>pages/images/rulebook/game_flow/god-warchief.png</file>
+        <file>pages/images/rulebook/game_flow/god.png</file>
+        <file>pages/images/rulebook/game_flow/warchief.png</file>
+        <file>pages/images/rulebook/game_flow/war.png</file>
+        <file>pages/images/rulebook/game_flow/war-1.jpg</file>
+        <file>pages/images/rulebook/game_flow/war-2.jpg</file>
+        <file>pages/images/rulebook/game_flow/war-3.jpg</file>
+        <file>pages/images/rulebook/game_flow/war-4.jpg</file>
+        <file>pages/images/rulebook/game_flow/war-5.jpg</file>
+        <file>pages/images/rulebook/game_flow/war-icon-1.png</file>
+        <file>pages/images/rulebook/game_flow/war-icon-2.png</file>
+        <file>pages/images/rulebook/game_flow/war-icon-3.png</file>
+        <file>pages/images/rulebook/game_flow/war-icon-4.png</file>
+        <file>pages/images/rulebook/game_flow/barbarians-knowledge.png</file>
+        <file>pages/images/rulebook/game_flow/tactics-knowledge.png</file>
+        <file>pages/images/rulebook/game_flow/discovery-icon.png</file>
+        <file>pages/images/rulebook/game_flow/defense-icon.png</file>
+        <file>pages/images/rulebook/game_flow/economy-icon.png</file>
+        <file>pages/images/rulebook/game_flow/production-icon.png</file>
+        <file>pages/images/rulebook/game_flow/other-actions-1.png</file>
+        <file>pages/images/rulebook/game_flow/other-actions-2.png</file>
+        <file>pages/images/rulebook/game_flow/trade-1.png</file>
+        <file>pages/images/rulebook/game_flow/trade-2.png</file>
+        <file>pages/images/rulebook/game_flow/trade-3.png</file>
+        <file>pages/images/rulebook/game_flow/trade-4.png</file>
+        <file>pages/images/rulebook/game_flow/trade-5.png</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>
