@@ -61,6 +61,11 @@
         <file>pages/images/rulebook/game_flow/volcanos-example.png</file>
         <file>pages/images/rulebook/game_end/gameend-heading.png</file>
         <file>pages/images/rulebook/game_end/game-end.jpg</file>
+        <file>pages/images/rulebook/variant/variant-heading.png</file>
+        <file>pages/images/rulebook/variant/blue-bear.png</file>
+        <file>pages/images/rulebook/variant/green-horse.png</file>
+        <file>pages/images/rulebook/variant/red-tiger.png</file>
+        <file>pages/images/rulebook/variant/yellow-wolf.png</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>
