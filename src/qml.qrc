@@ -19,6 +19,7 @@
         <file>pages/fonts/TrajanPro-Regular.woff</file>
         <file>pages/fonts/TrajanPro-Bold.woff</file>
         <file>pages/images/rulebook/main-background.jpg</file>
+        <file>pages/images/rulebook/expansion-background.jpg</file>
         <file>pages/images/rulebook/introduction/introduction-heading.png</file>
         <file>pages/images/rulebook/game_flow/gameflow-heading.png</file>
         <file>pages/images/rulebook/game_flow/maintenance.jpg</file>
@@ -66,6 +67,25 @@
         <file>pages/images/rulebook/variant/green-horse.png</file>
         <file>pages/images/rulebook/variant/red-tiger.png</file>
         <file>pages/images/rulebook/variant/yellow-wolf.png</file>
+        <file>pages/images/rulebook/expansion/expansion-heading.png</file>
+        <file>pages/images/rulebook/expansion/hunt-heading.png</file>
+        <file>pages/images/rulebook/expansion/expansion-setup-1.jpg</file>
+        <file>pages/images/rulebook/expansion/expansion-setup-2.jpg</file>
+        <file>pages/images/rulebook/expansion/expansion-setup-3.png</file>
+        <file>pages/images/rulebook/expansion/expansion-setup-4.jpg</file>
+        <file>pages/images/rulebook/expansion/war-glacier.png</file>
+        <file>pages/images/rulebook/expansion/war-forest.png</file>
+        <file>pages/images/rulebook/expansion/war-mountain.png</file>
+        <file>pages/images/rulebook/expansion/skullcrusher.png</file>
+        <file>pages/images/rulebook/expansion/hunt.jpg</file>
+        <file>pages/images/rulebook/expansion/beast-glacier.png</file>
+        <file>pages/images/rulebook/expansion/beast-forest.png</file>
+        <file>pages/images/rulebook/expansion/beast-mountain.png</file>
+        <file>pages/images/rulebook/expansion/beast-glacier-swamp.png</file>
+        <file>pages/images/rulebook/expansion/beast-forest-swamp.png</file>
+        <file>pages/images/rulebook/expansion/beast-mountain-swamp.png</file>
+        <file>pages/images/rulebook/expansion/beasts-example.jpg</file>
+        <file>pages/images/rulebook/expansion/monsters-example.jpg</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>

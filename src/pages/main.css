@@ -87,6 +87,11 @@ h6 {
   font-weight: bold;
 }
 
+.rulebook_expansion h2,
+.rulebook_expansion h3 {
+  color: #5c6060;
+}
+
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -115,10 +120,18 @@ ul {
   width: 100%;
 }
 
-.rulebook {
-  background: url('images/rulebook/main-background.jpg') no-repeat fixed;
+.rulebook,
+.rulebook_expansion {
   background-size: 100% 100%;
   padding: 4.236rem 1rem;
+}
+
+.rulebook {
+  background: url('images/rulebook/main-background.jpg') no-repeat fixed;
+}
+
+.rulebook_expansion {
+  background: url('images/rulebook/expansion-background.jpg') no-repeat fixed; 
 }
 
 /**
@@ -137,10 +150,10 @@ ul {
 }
 
 /**
- * Set a vertical flow to textual and graphic content
+ * Set a vertical flow to textual and graphic content, excluding containers
  */
-.inner_content > * + *:not(.inner_subcontent),
-.inner_subcontent > * + *:not(.inner_subcontent) {
+.inner_content > * + *:not(.inner_content):not(.inner_subcontent),
+.inner_subcontent > * + *:not(.inner_content):not(.inner_subcontent) {
   margin-top: 1rem;
 }
 
@@ -164,6 +177,25 @@ ul {
 .image_example {
   background: linear-gradient(to right, rgba(156,105,30,1) 0%, rgba(156,105,30,0) 90%);
   padding: 2px;
+}
+
+.rulebook_expansion .image_example {
+  background: linear-gradient(to right, rgba(103,119,148,1) 0%, rgba(103,119,148,0) 90%);
+}
+
+/**
+ * [1] Remove an unneeded dark brown line
+ */
+.image_example-caption {
+  background: linear-gradient(to right, rgba(170,154,134,1) 0%, rgba(170,154,134,0) 90%);
+  font-style: italic;
+  margin-top: -1px; /* [1] */
+  padding: 0.368rem 1rem;
+  position: relative;
+}
+
+.rulebook_expansion .image_example-caption {
+  background: linear-gradient(to right, rgba(157,163,175,1) 0%, rgba(157,163,175,0) 90%);
 }
 
 /* Text and image inline element
@@ -199,16 +231,6 @@ ul {
   float: right;
   margin-left: 1rem;
   shape-outside: circle();
-}
-
-/**
- * [1] Remove an unneeded dark brown line
- */
-.image_example-caption {
-  background: linear-gradient(to right, rgba(170,154,134,1) 0%, rgba(170,154,134,0) 90%);
-  margin-top: -1px; /* [1] */
-  padding: 0.368rem 1rem;
-  position: relative;
 }
 
 /* Heading with icon element
@@ -258,6 +280,10 @@ ul {
   position: relative;
 }
 
+.rulebook_expansion .note {
+  background: linear-gradient(to right, rgba(103,119,148,1) 0%, rgba(103,119,148,0) 90%);
+}
+
 /**
  * Create the border as background so that we can handle the gradient
  */
@@ -269,6 +295,10 @@ ul {
   position: absolute;
   right: 2px;
   top: 2px;
+}
+
+.rulebook_expansion .note::before {
+  background: linear-gradient(to right, rgba(157,163,175,1) 0%, rgba(157,163,175,0) 90%);
 }
 
 .note > p {
