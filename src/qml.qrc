@@ -56,6 +56,9 @@
         <file>pages/images/rulebook/game_flow/trade-3.png</file>
         <file>pages/images/rulebook/game_flow/trade-4.png</file>
         <file>pages/images/rulebook/game_flow/trade-5.png</file>
+        <file>pages/images/rulebook/game_flow/demon-card.jpg</file>
+        <file>pages/images/rulebook/game_flow/feast-card.jpg</file>
+        <file>pages/images/rulebook/game_flow/volcanos-example.png</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>
