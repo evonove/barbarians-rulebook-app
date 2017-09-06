@@ -86,6 +86,18 @@
         <file>pages/images/rulebook/expansion/beast-mountain-swamp.png</file>
         <file>pages/images/rulebook/expansion/beasts-example.jpg</file>
         <file>pages/images/rulebook/expansion/monsters-example.jpg</file>
+        <file>pages/images/rulebook/expansion/additional-heading.png</file>
+        <file>pages/images/rulebook/expansion/personal-example-1.jpg</file>
+        <file>pages/images/rulebook/expansion/personal-example-2.jpg</file>
+        <file>pages/images/rulebook/expansion/personal-example-3.jpg</file>
+        <file>pages/images/rulebook/expansion/personal-example-4.jpg</file>
+        <file>pages/images/rulebook/expansion/personal-example-5.jpg</file>
+        <file>pages/images/rulebook/expansion/special-buildings-1.jpg</file>
+        <file>pages/images/rulebook/expansion/special-buildings-2.jpg</file>
+        <file>pages/images/rulebook/expansion/special-buildings-3.jpg</file>
+        <file>pages/images/rulebook/expansion/special-buildings-4.jpg</file>
+        <file>pages/images/rulebook/expansion/demons-feasts-1.jpg</file>
+        <file>pages/images/rulebook/expansion/demons-feasts-2.jpg</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>
