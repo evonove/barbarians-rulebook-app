@@ -20,6 +20,7 @@
         <file>pages/fonts/TrajanPro-Bold.woff</file>
         <file>pages/images/rulebook/main-background.jpg</file>
         <file>pages/images/rulebook/expansion-background.jpg</file>
+        <file>pages/images/rulebook/reference-background.jpg</file>
         <file>pages/images/rulebook/introduction/introduction-heading.png</file>
         <file>pages/images/rulebook/game_flow/gameflow-heading.png</file>
         <file>pages/images/rulebook/game_flow/maintenance.jpg</file>
@@ -100,6 +101,21 @@
         <file>pages/images/rulebook/expansion/demons-feasts-2.jpg</file>
         <file>pages/images/rulebook/expansion/oneplayer-heading.png</file>
         <file>pages/images/rulebook/expansion/prephase.jpg</file>
+        <file>pages/images/rulebook/reference/reference-heading.png</file>
+        <file>pages/images/rulebook/reference/arrow.png</file>
+        <file>pages/images/rulebook/reference/building-card.png</file>
+        <file>pages/images/rulebook/reference/crown.png</file>
+        <file>pages/images/rulebook/reference/domination-points.png</file>
+        <file>pages/images/rulebook/reference/resources.png</file>
+        <file>pages/images/rulebook/reference/shield.png</file>
+        <file>pages/images/rulebook/reference/slash.png</file>
+        <file>pages/images/rulebook/reference/troops.png</file>
+        <file>pages/images/rulebook/reference/volcano.png</file>
+        <file>pages/images/rulebook/reference/god-warchief-card.png</file>
+        <file>pages/images/rulebook/reference/demons-1.jpg</file>
+        <file>pages/images/rulebook/reference/demons-2.jpg</file>
+        <file>pages/images/rulebook/reference/demons-3.jpg</file>
+        <file>pages/images/rulebook/reference/demons-4.jpg</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>

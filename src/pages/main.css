@@ -61,6 +61,10 @@ html {
   box-sizing: inherit;
 }
 
+.rulebook_reference {
+  color: #FFF;
+}
+
 h2 {
   color: #9C691E;
   font-family: Trajan Pro;
@@ -89,7 +93,11 @@ h6 {
 
 .rulebook_expansion h2,
 .rulebook_expansion h3 {
-  color: #5c6060;
+  color: #5C6060;
+}
+
+.rulebook_reference h2 {
+  color: #E5C99E;
 }
 
 img {
@@ -121,7 +129,8 @@ ul {
 }
 
 .rulebook,
-.rulebook_expansion {
+.rulebook_expansion,
+.rulebook_reference {
   background-size: 100% 100%;
   padding: 4.236rem 1rem;
 }
@@ -132,6 +141,10 @@ ul {
 
 .rulebook_expansion {
   background: url('images/rulebook/expansion-background.jpg') no-repeat fixed; 
+}
+
+.rulebook_reference {
+  background: url('images/rulebook/reference-background.jpg') no-repeat fixed; 
 }
 
 /**
