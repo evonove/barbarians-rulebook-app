@@ -98,6 +98,8 @@
         <file>pages/images/rulebook/expansion/special-buildings-4.jpg</file>
         <file>pages/images/rulebook/expansion/demons-feasts-1.jpg</file>
         <file>pages/images/rulebook/expansion/demons-feasts-2.jpg</file>
+        <file>pages/images/rulebook/expansion/oneplayer-heading.png</file>
+        <file>pages/images/rulebook/expansion/prephase.jpg</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>

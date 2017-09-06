@@ -224,6 +224,12 @@ ul {
   shape-outside: circle();
 }
 
+.text_around_image_left > img.wrapped_card,
+.text_around_image_right > img.wrapped_card {
+  shape-outside: none;
+  width: 50%;
+}
+
 /**
  * Image is positioned to the right
  */
