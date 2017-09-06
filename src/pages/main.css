@@ -120,6 +120,19 @@ ul {
   font-weight: bold;
 }
 
+.u-flex_center {
+  display: flex;
+  justify-content: center;
+}
+
+.u-half_width {
+  width: 50%;
+}
+
+.u-margin_auto {
+  margin: auto;
+}
+
 
 /* LAYOUT ELEMENTS
    ========================================================*/
@@ -130,12 +143,14 @@ ul {
 
 .rulebook,
 .rulebook_expansion,
-.rulebook_reference {
+.rulebook_reference,
+.rulebook_credits {
   background-size: 100% 100%;
   padding: 4.236rem 1rem;
 }
 
-.rulebook {
+.rulebook,
+.rulebook_credits {
   background: url('images/rulebook/main-background.jpg') no-repeat fixed;
 }
 
@@ -268,6 +283,11 @@ ul {
  ***************/
 .alpha_list {
   list-style-type: upper-alpha;
+}
+
+.blank_list {
+  list-style-type: none;
+  padding: 0;
 }
 
 /* Icons list element

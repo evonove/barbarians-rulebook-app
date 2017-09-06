@@ -116,6 +116,8 @@
         <file>pages/images/rulebook/reference/demons-2.jpg</file>
         <file>pages/images/rulebook/reference/demons-3.jpg</file>
         <file>pages/images/rulebook/reference/demons-4.jpg</file>
+        <file>pages/images/rulebook/credits/divider.png</file>
+        <file>pages/images/rulebook/credits/end.png</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>
