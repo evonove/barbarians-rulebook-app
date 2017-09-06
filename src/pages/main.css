@@ -304,3 +304,20 @@ ul {
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* Scores compared element
+ **************************/
+.banner_scoring {
+  display: flex;
+}
+
+.banner_scoring-regions,
+.banner_scoring-domination {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
