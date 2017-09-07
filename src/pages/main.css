@@ -113,6 +113,7 @@ ul {
 }
 
 .u-flex_center {
+  align-items: center;
   display: flex;
   justify-content: center;
 }
@@ -392,4 +393,29 @@ ul {
   list-style-type: none;
   padding: 0;
   text-align: center;
+}
+
+
+/* RESPONSIVE STYLES
+   ========================================================*/
+@media (min-width: 600px) {
+  html {
+    font-size: 18px;
+  }
+
+  figure {
+    margin: auto;
+    width: 77%;
+  }
+
+  .rulebook,
+  .rulebook_expansion,
+  .rulebook_reference,
+  .rulebook_credits {
+    padding: 4.236rem 2.618rem;
+  }
+
+  .icon {
+    max-width: 120px;
+  }
 }
