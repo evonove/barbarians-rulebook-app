@@ -19,8 +19,6 @@
         <file>pages/fonts/TrajanPro-Regular.woff</file>
         <file>pages/fonts/TrajanPro-Bold.woff</file>
         <file>pages/images/rulebook/main-background.jpg</file>
-        <file>pages/images/rulebook/expansion-background.jpg</file>
-        <file>pages/images/rulebook/reference-background.jpg</file>
         <file>pages/images/rulebook/introduction/introduction-heading.png</file>
         <file>pages/images/rulebook/game_flow/gameflow-heading.png</file>
         <file>pages/images/rulebook/game_flow/maintenance.jpg</file>
@@ -154,7 +152,6 @@
         <file>pages/images/rulebook/reference/demons-3.jpg</file>
         <file>pages/images/rulebook/reference/demons-4.jpg</file>
         <file>pages/images/rulebook/credits/divider.png</file>
-        <file>pages/images/rulebook/credits/end.png</file>
         <file>qtquickcontrols2.conf</file>
     </qresource>
 </RCC>

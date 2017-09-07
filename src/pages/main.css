@@ -147,7 +147,7 @@ ul {
 .rulebook_reference,
 .rulebook_credits {
   background-size: 100% 100%;
-  padding: 4.236rem 1rem;
+  padding: 4.236rem 1.618rem;
   position: relative;
 }
 
@@ -279,6 +279,7 @@ ul {
 }
 
 .heading_icon-heading {
+  margin-right: 1rem;
   width: 100%;
 }
 
@@ -398,6 +399,10 @@ ul {
 
 /* RESPONSIVE STYLES
    ========================================================*/
+
+/**
+ * Styles for tablet devices
+ */
 @media (min-width: 600px) {
   html {
     font-size: 18px;
@@ -417,5 +422,17 @@ ul {
 
   .icon {
     max-width: 120px;
+  }
+}
+
+/**
+ * Styles for small screens smartphones
+ */
+@media (max-width: 320px) {
+  .rulebook,
+  .rulebook_expansion,
+  .rulebook_reference,
+  .rulebook_credits {
+    padding: 4.236rem 1rem;
   }
 }
