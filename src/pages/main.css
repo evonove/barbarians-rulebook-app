@@ -61,10 +61,6 @@ html {
   box-sizing: inherit;
 }
 
-.rulebook_reference {
-  color: #FFF;
-}
-
 h2 {
   color: #9C691E;
   font-family: Trajan Pro;
@@ -94,10 +90,6 @@ h6 {
 .rulebook_expansion h2,
 .rulebook_expansion h3 {
   color: #5C6060;
-}
-
-.rulebook_reference h2 {
-  color: #E5C99E;
 }
 
 img {
@@ -155,19 +147,21 @@ ul {
 .rulebook_credits {
   background-size: 100% 100%;
   padding: 4.236rem 1rem;
+  position: relative;
 }
 
-.rulebook,
-.rulebook_credits {
-  background: url('images/rulebook/main-background.jpg') no-repeat fixed;
-}
-
-.rulebook_expansion {
-  background: url('images/rulebook/expansion-background.jpg') no-repeat fixed; 
-}
-
-.rulebook_reference {
-  background: url('images/rulebook/reference-background.jpg') no-repeat fixed; 
+/**
+ * Fixed backgrounds are disabled on mobile devices, so we use a workaround
+ * which consists of using a single background in a fixed positioned div.
+ */
+.fixed_background {
+  background: url('images/rulebook/main-background.jpg') no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /**
