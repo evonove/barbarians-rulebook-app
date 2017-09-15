@@ -9,7 +9,9 @@ SOURCES += \
 HEADERS += \
     $$PWD/utils.h
 
-RESOURCES += qml.qrc
+RESOURCES += \
+    $$PWD/qml.qrc \
+    $$PWD/pages.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =

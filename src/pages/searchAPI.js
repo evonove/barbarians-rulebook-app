@@ -72,7 +72,7 @@
           el.style.backgroundColor = 'gray';
 
           // scroll the view to the element
-          window.scrollTo(0, el.offsetTop);
+          window.scrollTo(0, offset(el).top);
         } else {
           current = -1;
         }
@@ -100,12 +100,18 @@
           el.style.backgroundColor = 'gray';
 
           // scroll the view to the element
-          window.scrollTo(0, el.offsetTop);
+          window.scrollTo(0, offset(el).top);
         } else {
           current = -1;
         }
 
         return current;
+    }
+
+    function offset(el) {
+        var rect = el.getBoundingClientRect();
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop }
     }
 
 }(this));

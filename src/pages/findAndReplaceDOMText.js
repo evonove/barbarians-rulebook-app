@@ -198,7 +198,7 @@
       var matches = [];
       var self = this;
 
-      regex = typeof regex === 'string' ? RegExp(escapeRegExp(regex), 'g') : regex;
+      regex = typeof regex === 'string' ? RegExp(escapeRegExp(regex), 'gi') : regex;
 
       matchAggregation(textAggregation);
 
