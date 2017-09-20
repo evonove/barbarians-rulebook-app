@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>assets/splash-logo-bg.jpg</file>
         <file>qml/main.qml</file>
         <file>qml/MainMenu.qml</file>
         <file>qml/Rulebook.qml</file>

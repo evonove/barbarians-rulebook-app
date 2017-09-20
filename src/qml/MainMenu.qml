@@ -1,5 +1,6 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.2
+import QtQuick.Controls.Material 2.2
 import QtQuick.Layouts 1.3
 
 
@@ -21,20 +22,26 @@ Page {
 
     padding: 0
 
+    font.weight: Font.DemiBold
+
+    background: Image {
+        anchors.fill: root
+        source: "qrc:/assets/splash-logo-bg.jpg"
+        fillMode: Image.PreserveAspectCrop
+
+        horizontalAlignment: Image.AlignHCenter
+        verticalAlignment: Image.AlignTop
+    }
+
     ColumnLayout {
         anchors.fill: parent
         spacing: 0
 
-        // FIXME: replace this rectangle with the proper logo from assets
-        Rectangle {
-            color: "gray"
-
+        Item {
             Layout.alignment: Qt.AlignTop | Qt.AlignCenter
             Layout.preferredHeight: Math.floor(parent.height / 3)
             Layout.fillHeight: false
             Layout.fillWidth: true
-
-            Label { anchors.centerIn: parent; text: "***LOGO HERE***" }
         }
 
         ColumnLayout {
@@ -50,6 +57,9 @@ Page {
 
                 Layout.alignment: Qt.AlignCenter
                 Layout.preferredWidth: 150
+
+                Material.foreground: Material.color(Material.Grey, Material.Shade900)
+                Material.background: Material.Amber
             }
             Button {
                 id: _rulebookButton
@@ -58,6 +68,9 @@ Page {
 
                 Layout.alignment: Qt.AlignCenter
                 Layout.preferredWidth: 150
+
+                Material.foreground: Material.color(Material.Grey, Material.Shade900)
+                Material.background: Material.Amber
             }
             Button {
                 id: _artworkButton
@@ -66,6 +79,9 @@ Page {
 
                 Layout.alignment: Qt.AlignCenter
                 Layout.preferredWidth: 150
+
+                Material.foreground: Material.color(Material.Grey, Material.Shade900)
+                Material.background: Material.Amber
             }
             Button {
                 id: _ostButton
@@ -74,6 +90,9 @@ Page {
 
                 Layout.alignment: Qt.AlignCenter
                 Layout.preferredWidth: 150
+
+                Material.foreground: Material.color(Material.Grey, Material.Shade900)
+                Material.background: Material.Amber
             }
         }
     }
@@ -88,15 +107,19 @@ Page {
         readonly property string volumeOn: "\uE050"
         readonly property string volumeOff: "\uE04F"
 
+        width: 56; height: 56
+
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         anchors.margins: 16
 
-        highlighted: true
         text: root.musicIsPlaying ? volumeOn : volumeOff
 
         font.family: "Material Icons"
-        font.pixelSize: 16
+        font.pixelSize: 24
+
+        Material.foreground: Material.color(Material.Amber, Material.Shade200)
+        Material.background: Material.color(Material.Brown, Material.Shade500)
     }
 
     Component.onCompleted: {
