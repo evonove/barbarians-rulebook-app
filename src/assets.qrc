@@ -3,17 +3,17 @@
         <file>assets/0-setup/cards-alpha.png</file>
         <file>assets/0-setup/gameboard-alpha.png</file>
         <file>assets/0-setup/player-alpha.png</file>
-        <file>assets/steps/wizard-1.jpg</file>
+        <file>assets/steps/wizard-1.png</file>
         <file>assets/steps/wizard-1-internal.png</file>
         <file>assets/steps/wizard-1-internal2.png</file>
-        <file>assets/steps/wizard-2.jpg</file>
-        <file>assets/steps/wizard-3.jpg</file>
-        <file>assets/steps/wizard-4.jpg</file>
-        <file>assets/steps/wizard-5.jpg</file>
-        <file>assets/steps/wizard-6.jpg</file>
-        <file>assets/steps/wizard-7.jpg</file>
-        <file>assets/steps/wizard-8.jpg</file>
-        <file>assets/steps/wizard-9.jpg</file>
+        <file>assets/steps/wizard-2.png</file>
+        <file>assets/steps/wizard-3.png</file>
+        <file>assets/steps/wizard-4.png</file>
+        <file>assets/steps/wizard-5.png</file>
+        <file>assets/steps/wizard-6.png</file>
+        <file>assets/steps/wizard-7.png</file>
+        <file>assets/steps/wizard-8.png</file>
+        <file>assets/steps/wizard-9.png</file>
         <file>assets/background.jpg</file>
         <file>assets/splash-logo-bg.jpg</file>
     </qresource>

@@ -23,8 +23,9 @@ Page {
             Image {
                 id: _mainImage
                 width: root.availableWidth
-                sourceSize.width: width
                 fillMode: Image.PreserveAspectFit
+
+                smooth: false
             }
 
             Label {

@@ -5,6 +5,10 @@
 #include <QQmlContext>
 #include <QFileInfo>
 
+#ifdef Q_OS_ANDROID
+#include <QtAndroid>
+#endif
+
 #include "utils.h"
 
 
@@ -29,6 +33,10 @@ int main(int argc, char *argv[])
     engine.load(QUrl(QLatin1String("qrc:/qml/main.qml")));
     if (engine.rootObjects().isEmpty())
         return -1;
+
+#ifdef Q_OS_ANDROID
+    QtAndroid::hideSplashScreen();
+#endif
 
     return app.exec();
 }
