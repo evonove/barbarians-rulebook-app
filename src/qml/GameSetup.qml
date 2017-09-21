@@ -81,13 +81,21 @@ Page {
     SwipeView {
         anchors.fill: parent
         currentIndex: root.currentStep
+        onCurrentIndexChanged: root.currentStep = currentIndex
 
         GameSetupMap {
             onStepClicked: root.currentStep = step
         }
+
         Repeater {
-            model: 9
-            Rectangle { }
+            model: GameSetupModel {}
+
+            GameSetupStep {
+                id: _step
+                title: model.title
+                content: model.index === 0 ? model.content.arg(_step.availableWidth) : model.content
+                mainImageSource: model.image
+            }
         }
 
     }

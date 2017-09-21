@@ -2,6 +2,8 @@
     <qresource prefix="/">
         <file>qml/GameSetup.qml</file>
         <file>qml/GameSetupMap.qml</file>
+        <file>qml/GameSetupStep.qml</file>
+        <file>qml/GameSetupModel.qml</file>
         <file>qml/main.qml</file>
         <file>qml/MainMenu.qml</file>
         <file>qml/Rulebook.qml</file>

@@ -59,7 +59,7 @@ Page {
                 Layout.preferredWidth: 150
 
                 Material.foreground: Material.color(Material.Grey, Material.Shade900)
-                Material.background: Material.Amber
+                Material.background: Material.color(Material.Amber, Material.Shade200)
             }
             Button {
                 id: _rulebookButton
@@ -70,7 +70,7 @@ Page {
                 Layout.preferredWidth: 150
 
                 Material.foreground: Material.color(Material.Grey, Material.Shade900)
-                Material.background: Material.Amber
+                Material.background: Material.color(Material.Amber, Material.Shade200)
             }
             Button {
                 id: _artworkButton
@@ -81,7 +81,7 @@ Page {
                 Layout.preferredWidth: 150
 
                 Material.foreground: Material.color(Material.Grey, Material.Shade900)
-                Material.background: Material.Amber
+                Material.background: Material.color(Material.Amber, Material.Shade200)
             }
             Button {
                 id: _ostButton
@@ -92,7 +92,7 @@ Page {
                 Layout.preferredWidth: 150
 
                 Material.foreground: Material.color(Material.Grey, Material.Shade900)
-                Material.background: Material.Amber
+                Material.background: Material.color(Material.Amber, Material.Shade200)
             }
         }
     }
