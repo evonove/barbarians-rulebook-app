@@ -1,11 +1,13 @@
 <RCC>
     <qresource prefix="/">
-        <file>assets/splash-logo-bg.jpg</file>
+        <file>qml/GameSetup.qml</file>
+        <file>qml/GameSetupMap.qml</file>
         <file>qml/main.qml</file>
         <file>qml/MainMenu.qml</file>
         <file>qml/Rulebook.qml</file>
         <file>qml/RulebookHeader.qml</file>
         <file>qml/RulebookIndex.qml</file>
+        <file>qml/components/RoundButtonGS.qml</file>
         <file>qml/components/WebViewSearch.qml</file>
         <file>fonts/MaterialIcons-Regular.ttf</file>
         <file>qtquickcontrols2.conf</file>

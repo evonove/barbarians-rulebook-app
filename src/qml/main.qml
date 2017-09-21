@@ -22,13 +22,17 @@ ApplicationWindow {
 
         initialItem: MainMenu {
            onRulebookClicked: _stackView.push(_rulebook)
+           onGameSetupClicked: _stackView.push(_gameSetup)
         }
 
         Component {
             id: _rulebook
-            Rulebook {
-               rulebookUrl: baseUrl
-            }
+            Rulebook { rulebookUrl: baseUrl }
+        }
+
+        Component {
+            id: _gameSetup
+            GameSetup { }
         }
     }
 }

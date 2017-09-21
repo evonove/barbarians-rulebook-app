@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/0-setup/cards-alpha.png</file>
+        <file>assets/0-setup/gameboard-alpha.png</file>
+        <file>assets/0-setup/player-alpha.png</file>
+        <file>assets/background.jpg</file>
+        <file>assets/splash-logo-bg.jpg</file>
+    </qresource>
+</RCC>

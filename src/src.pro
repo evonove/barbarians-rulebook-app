@@ -10,6 +10,7 @@ HEADERS += \
     $$PWD/utils.h
 
 RESOURCES += \
+    $$PWD/assets.qrc \
     $$PWD/qml.qrc \
     $$PWD/pages.qrc
 
@@ -39,3 +40,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 OTHER_FILES += \
     $$PWD/qml/*.qml \
     $$PWD/qml/components/*.qml
+
+DISTFILES += \
+    qml/components/RoundButtonGS.qml \
+    qml/GameSetup.qml
