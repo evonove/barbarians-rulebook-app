@@ -69,6 +69,8 @@ Page {
 
     background: Image {
         anchors.fill: root
+        asynchronous: true
+        cache: true
         source: "qrc:/assets/background.jpg"
         fillMode: Image.PreserveAspectCrop
 
@@ -83,18 +85,30 @@ Page {
         currentIndex: root.currentStep
         onCurrentIndexChanged: root.currentStep = currentIndex
 
-        GameSetupMap {
-            onStepClicked: root.currentStep = step
+        Loader {
+            objectName: "_mapLoader"
+            active: SwipeView.isCurrentItem || SwipeView.isPreviousItem
+            asynchronous: true
+
+            sourceComponent: GameSetupMap {
+                onStepClicked: root.currentStep = step
+            }
         }
+
 
         Repeater {
             model: GameSetupModel {}
 
-            GameSetupStep {
-                id: _step
-                title: model.title
-                content: model.index === 0 ? model.content.arg(_step.availableWidth) : model.content
-                mainImageSource: model.image
+            Loader {
+                active: SwipeView.isCurrentItem || SwipeView.isPreviousItem || SwipeView.isNextItem
+                asynchronous: true
+
+                sourceComponent: GameSetupStep {
+                    id: _step
+                    title: model.title
+                    content: model.index === 0 ? model.content.arg(_step.availableWidth) : model.content
+                    mainImageSource: model.image
+                }
             }
         }
 

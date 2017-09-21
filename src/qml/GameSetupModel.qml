@@ -6,9 +6,9 @@ ListModel {
         title: qsTr("1. Gameboard")
         image: "qrc:/assets/steps/wizard-1.jpg"
         content: "Place the gameboard in the center of the table.<br/>
-<img src='qrc:/assets/steps/wizard-1-internal.png' width=%1 /><br/>
+<img src='qrc:/assets/steps/wizard-1-internal.png' width=%1 /><br/><br/>
 Assemble the Volcano and place it in the indicated space on the gameboard.<br/><br/>
-<img src='qrc:/assets/steps/wizard-1-internal2.png' width=%1 /><br/>
+<img src='qrc:/assets/steps/wizard-1-internal2.png' width=%1 /><br/><br/>
 Each cardboard ring is divided into 6 sectors; position each ring randomly,
 in such a way that each sector is linked to two sectors of the successive ring.
 "
@@ -19,8 +19,8 @@ in such a way that each sector is linked to two sectors of the successive ring.
         image: "qrc:/assets/steps/wizard-2.jpg"
         content: "Set up the map.<br/>
 Place one First Conquer tile on each island.<br/>
-Randomly place the faction tokens in each region on the map, excluding the starting one.<br/>
-In a 3-player game: return to the gamebox the faction tokens in the regions marked “4+”.<br/>
+Randomly place the faction tokens in each region on the map, excluding the starting one.<br/><br/>
+In a 3-player game: return to the gamebox the faction tokens in the regions marked “4+”.<br/><br/>
 In a 2-player game: return to the gamebox the faction tokens in the regions marked “3+” and “4+”.
 "
     }
@@ -28,7 +28,7 @@ In a 2-player game: return to the gamebox the faction tokens in the regions mark
     ListElement {
         title: qsTr("3. Region Decks")
         image: "qrc:/assets/steps/wizard-3.jpg"
-        content: "Sort the 72 Region cards into 4 decks by color.<br/>
+        content: "Sort the 72 Region cards into 4 decks by color.<br/><br/>
 Shuffle each deck and place them face-down.
 "
     }

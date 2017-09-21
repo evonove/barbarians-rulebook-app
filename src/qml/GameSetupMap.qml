@@ -19,7 +19,7 @@ Page {
 
     // we need a transparent background because it is set on
     // the main GameSetup page
-    background: Item {}
+    Material.background: "transparent"
 
     ColumnLayout {
         anchors.fill: parent
@@ -93,8 +93,8 @@ Page {
 
                     anchors.top: parent.top
                     anchors.left: parent.left
-                    anchors.topMargin: Math.ceil(parent.height / 1.8)
-                    anchors.leftMargin: Math.ceil(parent.width / 1.9)
+                    anchors.topMargin: Math.ceil(parent.height / 2)
+                    anchors.leftMargin: Math.ceil(parent.width / 2)
                     text: "9"
 
                     onClicked: root.stepClicked(9)
@@ -104,7 +104,7 @@ Page {
                     objectName: "_eight"
                     anchors.bottom: parent.bottom
                     anchors.right: parent.right
-                    anchors.rightMargin: Math.ceil(parent.width / 4)
+                    anchors.rightMargin: Math.ceil(parent.width / 5)
                     text: "8"
 
                     onClicked: root.stepClicked(8)

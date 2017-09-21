@@ -9,9 +9,16 @@ TestCase {
     width: 400; height: 400
     visible: true
     name: "GameSetup"
+    when: windowShown
+
+    SignalSpy {
+        id: spy
+        signalName: "loaded"
+    }
 
     StackView {
         id: stack
+        anchors.fill: parent
         initialItem: Page { objectName: "page" }
     }
 
@@ -35,6 +42,11 @@ TestCase {
     // Verify that clicking on step button changes current step
     function test_step_clicked_moves_current_step() {
         stack.push(gameSetup);
+        // here we wait for the asynchronous loader to finish
+        // otherwise we won't find the child "_five"
+        var loader = findChild(stack.currentItem, "_mapLoader");
+        spy.target = loader
+        spy.wait(2000);
         var stepFive = findChild(stack.currentItem, "_five");
         stepFive.clicked();
         compare(stack.currentItem.currentStep, 5);
@@ -44,6 +56,11 @@ TestCase {
     // Verify prev button moves back
     function test_prev_button_moves_backward() {
         stack.push(gameSetup);
+        // here we wait for the asynchronous loader to finish
+        // otherwise we won't find the child "_five"
+        var loader = findChild(stack.currentItem, "_mapLoader");
+        spy.target = loader
+        spy.wait(2000);
         var stepFive = findChild(stack.currentItem, "_five");
         stepFive.clicked();
         compare(stack.currentItem.currentStep, 5);
@@ -51,12 +68,19 @@ TestCase {
         var prevButton = findChild(stack.currentItem, "_prevButton");
         prevButton.clicked();
         compare(stack.currentItem.currentStep, 4);
+        // clean up
+        spy.clear()
         stack.pop();
     }
 
     // Verify next button moves forward
     function test_next_button_moves_forward() {
         stack.push(gameSetup);
+        // here we wait for the asynchronous loader to finish
+        // otherwise we won't find the child "_five"
+        var loader = findChild(stack.currentItem, "_mapLoader");
+        spy.target = loader
+        spy.wait(2000);
         var stepFive = findChild(stack.currentItem, "_five");
         stepFive.clicked();
         compare(stack.currentItem.currentStep, 5);
@@ -64,6 +88,8 @@ TestCase {
         var nextButton = findChild(stack.currentItem, "_nextButton");
         nextButton.clicked();
         compare(stack.currentItem.currentStep, 6);
+        // clean up
+        spy.clear()
         stack.pop();
     }
 }

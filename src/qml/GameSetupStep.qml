@@ -1,5 +1,6 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.2
+import QtQuick.Controls.Material 2.2
 import QtQuick.Layouts 1.3
 
 Page {
@@ -11,7 +12,7 @@ Page {
 
     // we need a transparent background because it is set on
     // the main GameSetup page
-    background: Item {}
+    Material.background: "transparent"
 
     ScrollView {
         anchors.fill: parent
@@ -32,7 +33,7 @@ Page {
                 text: root.title
                 wrapMode: Text.Wrap
 
-                font.pixelSize: 24
+                font.pixelSize: 20
                 font.weight: Font.DemiBold
             }
 
@@ -42,7 +43,7 @@ Page {
                 wrapMode: Text.Wrap
                 textFormat: Text.RichText
 
-                font.pixelSize: 20
+                font.pixelSize: 16
             }
         }
     }

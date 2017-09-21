@@ -16,8 +16,8 @@ Page {
     padding: 0
 
     header: RulebookHeader {
-        total: _webView.elementsFound
-        current: _webView.currentElement
+        total: _webViewLoader.active ? _webViewLoader.item.elementsFound : 0
+        current: _webViewLoader.active ? _webViewLoader.item.currentElement : 0
 
         onMenuButtonClicked: {
             // here we reset the fragment so that the webview
@@ -28,17 +28,20 @@ Page {
 
         onBackButtonClicked: root.StackView.view.pop()
 
-        onSearchTextChanged: _webView.find(text)
-        onNextButtonClicked: _webView.next()
-        onPrevButtonClicked: _webView.prev()
-        onCloseSearchButtonClicked: _webView.init()
+        onSearchTextChanged: _webViewLoader.active && _webViewLoader.item.find(text)
+        onNextButtonClicked: _webViewLoader.active && _webViewLoader.item.next()
+        onPrevButtonClicked: _webViewLoader.active && _webViewLoader.item.prev()
+        onCloseSearchButtonClicked: _webViewLoader.active && _webViewLoader.item.init()
     }
 
-    WebViewSearch {
-        id: _webView
+    Loader {
+        id: _webViewLoader
         anchors.fill: parent
+        asynchronous: true
 
-        url: root.rulebookUrl + root.fragment
+        sourceComponent: WebViewSearch {
+            url: root.rulebookUrl + root.fragment
+        }
     }
 
     Component {
