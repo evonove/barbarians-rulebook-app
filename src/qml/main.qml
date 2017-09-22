@@ -1,9 +1,7 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.2
 
-// we need to explictly import the style used
-// because otherwise static build won't find it
-import QtQuick.Controls.Material 2.2
+import QtMultimedia 5.8
 
 
 ApplicationWindow {
@@ -21,8 +19,11 @@ ApplicationWindow {
         anchors.fill: parent
 
         initialItem: MainMenu {
-           onRulebookClicked: _stackView.push(_rulebook)
-           onGameSetupClicked: _stackView.push(_gameSetup)
+            musicIsPlaying: _player.playbackState === Audio.PlayingState
+
+            onRulebookClicked: _stackView.push(_rulebook)
+            onGameSetupClicked: _stackView.push(_gameSetup)
+            onVolumeClicked: _player.playbackState === Audio.PlayingState ? _player.pause() : _player.play()
         }
 
         Component {
@@ -33,6 +34,18 @@ ApplicationWindow {
         Component {
             id: _gameSetup
             GameSetup { }
+        }
+    }
+
+    Audio {
+        id: _player;
+        autoPlay: true
+
+        playlist: Playlist {
+            id: _playlist
+            PlaylistItem { source: "qrc:/music/song1.mp3"; }
+            PlaylistItem { source: "qrc:/music/song2.mp3"; }
+            PlaylistItem { source: "qrc:/music/song3.mp3"; }
         }
     }
 }
