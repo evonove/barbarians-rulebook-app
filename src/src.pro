@@ -45,6 +45,7 @@ OTHER_FILES += \
     $$PWD/qml/*.qml \
     $$PWD/qml/components/*.qml
 
+
 android {
     QT += androidextras
 
@@ -55,4 +56,23 @@ android {
         $$PWD/android/build.gradle
 
     ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+}
+
+ios {
+    OTHER_FILES += $$PWD/ios/*
+
+    # Add a custom plist
+    QMAKE_INFO_PLIST = $$PWD/ios/Info.plist
+
+    # application icons
+    ios_icon.files = $$files($$PWD/ios/AppIcon*.png)
+    QMAKE_BUNDLE_DATA += ios_icon
+
+    # launch images
+    launchimages.files = $$files($$PWD/ios/LaunchImage*.png)
+    QMAKE_BUNDLE_DATA += launchimages
+
+    # itunes artwork
+    itunes_images.files = $$files($$PWD/ios/iTunesArtwork*.png)
+    QMAKE_BUNDLE_DATA += itunes_images
 }
