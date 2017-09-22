@@ -16,5 +16,6 @@
         <file>assets/steps/wizard-9.png</file>
         <file>assets/background.jpg</file>
         <file>assets/splash-logo-bg.jpg</file>
+        <file>assets/ost-background.jpg</file>
     </qresource>
 </RCC>

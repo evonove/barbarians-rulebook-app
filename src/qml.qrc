@@ -13,5 +13,6 @@
         <file>qml/components/WebViewSearch.qml</file>
         <file>fonts/MaterialIcons-Regular.ttf</file>
         <file>qtquickcontrols2.conf</file>
+        <file>qml/OriginalSoundTrack.qml</file>
     </qresource>
 </RCC>

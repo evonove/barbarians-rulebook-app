@@ -23,6 +23,8 @@ ApplicationWindow {
 
             onRulebookClicked: _stackView.push(_rulebook)
             onGameSetupClicked: _stackView.push(_gameSetup)
+            onOstClicked: _stackView.push(_ost)
+
             onVolumeClicked: _player.playbackState === Audio.PlayingState ? _player.pause() : _player.play()
         }
 
@@ -35,6 +37,11 @@ ApplicationWindow {
             id: _gameSetup
             GameSetup { }
         }
+
+        Component {
+            id: _ost
+            OriginalSoundTrack { player: _player }
+        }
     }
 
     Audio {
@@ -43,9 +50,24 @@ ApplicationWindow {
 
         playlist: Playlist {
             id: _playlist
+
+            playbackMode: Playlist.Loop
+
             PlaylistItem { source: "qrc:/music/song1.mp3"; }
             PlaylistItem { source: "qrc:/music/song2.mp3"; }
             PlaylistItem { source: "qrc:/music/song3.mp3"; }
         }
+
+        /* This model contains metadata about the playlist item.
+         * This is a workaround because the Playlist and PlaylistItem items
+         * APIs are limited, and it is hard to get additional info other
+         * than the `source`.
+         */
+        property ListModel metadata: ListModel {
+            ListElement { title: "Song 1" }
+            ListElement { title: "Song 2" }
+            ListElement { title: "Song 3" }
+        }
     }
+
 }
