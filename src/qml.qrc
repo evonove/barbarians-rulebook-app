@@ -1,11 +1,18 @@
 <RCC>
     <qresource prefix="/">
+        <file>qml/Artwork.qml</file>
+        <file>qml/ArtworkGrid.qml</file>
+        <file>qml/ArtworkModel.qml</file>
+        <file>qml/ArtworkSlideDelegate.qml</file>
+        <file>qml/ArtworkSlides.qml</file>
+        <file>qml/Credits.qml</file>
         <file>qml/GameSetup.qml</file>
         <file>qml/GameSetupMap.qml</file>
         <file>qml/GameSetupStep.qml</file>
         <file>qml/GameSetupModel.qml</file>
         <file>qml/main.qml</file>
         <file>qml/MainMenu.qml</file>
+        <file>qml/OriginalSoundTrack.qml</file>
         <file>qml/Rulebook.qml</file>
         <file>qml/RulebookHeader.qml</file>
         <file>qml/RulebookIndex.qml</file>
@@ -13,8 +20,5 @@
         <file>qml/components/WebViewSearch.qml</file>
         <file>fonts/MaterialIcons-Regular.ttf</file>
         <file>qtquickcontrols2.conf</file>
-        <file>qml/OriginalSoundTrack.qml</file>
-        <file>qml/Artwork.qml</file>
-        <file>qml/ArtworkModel.qml</file>
     </qresource>
 </RCC>

@@ -10,7 +10,7 @@ Page {
     id: root
 
     // Material Icons needed by this page
-    readonly property string apps: "\uE5C3"
+    readonly property string menu: "\uE5D2"
     readonly property string skipPrevious: "\uE045"
     readonly property string skipNext: "\uE044"
     readonly property string pause: "\uE034"
@@ -23,7 +23,7 @@ Page {
         anchors.fill: root
         asynchronous: true
         cache: true
-        source: "qrc:/assets/ost-background.jpg"
+        source: "/assets/ost/background.jpg"
         fillMode: Image.PreserveAspectCrop
 
         horizontalAlignment: Image.AlignHCenter
@@ -51,7 +51,7 @@ Page {
 
             ToolButton {
                 objectName: "_backButton"
-                text: root.apps
+                text: root.menu
                 onClicked: root.StackView.view.pop()
 
                 font.family: "Material Icons"

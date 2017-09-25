@@ -19,81 +19,84 @@ Page {
     signal artworkClicked()
     signal ostClicked()
     signal volumeClicked()
+    signal infoClicked()
 
     padding: 0
 
     font.weight: Font.DemiBold
 
     background: Image {
-        anchors.fill: root
-        source: "qrc:/assets/splash-logo-bg.jpg"
+        source: "qrc:/assets/splash-bg.png"
         fillMode: Image.PreserveAspectCrop
+        smooth: false
 
         horizontalAlignment: Image.AlignHCenter
         verticalAlignment: Image.AlignTop
     }
 
-    ColumnLayout {
-        anchors.fill: parent
-        spacing: 0
 
-        Item {
-            Layout.alignment: Qt.AlignTop | Qt.AlignCenter
-            Layout.preferredHeight: Math.floor(parent.height / 3)
-            Layout.fillHeight: false
-            Layout.fillWidth: true
+    ColumnLayout {
+        spacing: 16
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 46
+
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        Button {
+            id: _gameSetupButton
+            objectName: "_gameSetupButton"
+            text: qsTr("Game Setup")
+
+            Layout.alignment: Qt.AlignCenter
+            Layout.preferredWidth: 150
+
+            Material.foreground: Material.color(Material.Grey, Material.Shade900)
+            Material.background: Material.color(Material.Amber, Material.Shade200)
+        }
+        Button {
+            id: _rulebookButton
+            objectName: "_rulebookButton"
+            text: qsTr("Rulebook")
+
+            Layout.alignment: Qt.AlignCenter
+            Layout.preferredWidth: 150
+
+            Material.foreground: Material.color(Material.Grey, Material.Shade900)
+            Material.background: Material.color(Material.Amber, Material.Shade200)
+        }
+        Button {
+            id: _artworkButton
+            objectName: "_artworkButton"
+            text: qsTr("Artwork")
+
+            Layout.alignment: Qt.AlignCenter
+            Layout.preferredWidth: 150
+
+            Material.foreground: Material.color(Material.Grey, Material.Shade900)
+            Material.background: Material.color(Material.Amber, Material.Shade200)
+        }
+        Button {
+            id: _ostButton
+            objectName: "_ostButton"
+            text: qsTr("OST")
+
+            Layout.alignment: Qt.AlignCenter
+            Layout.preferredWidth: 150
+
+            Material.foreground: Material.color(Material.Grey, Material.Shade900)
+            Material.background: Material.color(Material.Amber, Material.Shade200)
         }
 
-        ColumnLayout {
-            spacing: 16
+        Button {
+            id: _infoButton
+            objectName: "_infoButton"
+            text: qsTr("Info")
+            flat: true
 
-            Layout.alignment: Qt.AlignTop | Qt.AlignCenter
-            Layout.fillHeight: true
+            Layout.alignment: Qt.AlignCenter
+            Layout.preferredWidth: 150
 
-            Button {
-                id: _gameSetupButton
-                objectName: "_gameSetupButton"
-                text: qsTr("Game Setup")
-
-                Layout.alignment: Qt.AlignCenter
-                Layout.preferredWidth: 150
-
-                Material.foreground: Material.color(Material.Grey, Material.Shade900)
-                Material.background: Material.color(Material.Amber, Material.Shade200)
-            }
-            Button {
-                id: _rulebookButton
-                objectName: "_rulebookButton"
-                text: qsTr("Rulebook")
-
-                Layout.alignment: Qt.AlignCenter
-                Layout.preferredWidth: 150
-
-                Material.foreground: Material.color(Material.Grey, Material.Shade900)
-                Material.background: Material.color(Material.Amber, Material.Shade200)
-            }
-            Button {
-                id: _artworkButton
-                objectName: "_artworkButton"
-                text: qsTr("Artwork")
-
-                Layout.alignment: Qt.AlignCenter
-                Layout.preferredWidth: 150
-
-                Material.foreground: Material.color(Material.Grey, Material.Shade900)
-                Material.background: Material.color(Material.Amber, Material.Shade200)
-            }
-            Button {
-                id: _ostButton
-                objectName: "_ostButton"
-                text: qsTr("OST")
-
-                Layout.alignment: Qt.AlignCenter
-                Layout.preferredWidth: 150
-
-                Material.foreground: Material.color(Material.Grey, Material.Shade900)
-                Material.background: Material.color(Material.Amber, Material.Shade200)
-            }
+            Material.foreground: Material.color(Material.Amber, Material.Shade200)
         }
     }
 
@@ -128,5 +131,6 @@ Page {
         _rulebookButton.clicked.connect(root.rulebookClicked);
         _artworkButton.clicked.connect(root.artworkClicked);
         _ostButton.clicked.connect(root.ostClicked);
+        _infoButton.clicked.connect(root.infoClicked);
     }
 }

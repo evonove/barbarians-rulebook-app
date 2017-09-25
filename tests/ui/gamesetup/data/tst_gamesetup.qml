@@ -49,7 +49,7 @@ TestCase {
         spy.wait(2000);
         var stepFive = findChild(stack.currentItem, "_five");
         stepFive.clicked();
-        compare(stack.currentItem.currentStep, 5);
+        compare(stack.currentItem.currentIndex, 5);
         stack.pop();
     }
 
@@ -63,11 +63,11 @@ TestCase {
         spy.wait(2000);
         var stepFive = findChild(stack.currentItem, "_five");
         stepFive.clicked();
-        compare(stack.currentItem.currentStep, 5);
+        compare(stack.currentItem.currentIndex, 5);
         // press prev button to go to page 4
         var prevButton = findChild(stack.currentItem, "_prevButton");
         prevButton.clicked();
-        compare(stack.currentItem.currentStep, 4);
+        compare(stack.currentItem.currentIndex, 4);
         // clean up
         spy.clear()
         stack.pop();
@@ -83,11 +83,11 @@ TestCase {
         spy.wait(2000);
         var stepFive = findChild(stack.currentItem, "_five");
         stepFive.clicked();
-        compare(stack.currentItem.currentStep, 5);
+        compare(stack.currentItem.currentIndex, 5);
         // press next button to go to page 6
         var nextButton = findChild(stack.currentItem, "_nextButton");
         nextButton.clicked();
-        compare(stack.currentItem.currentStep, 6);
+        compare(stack.currentItem.currentIndex, 6);
         // clean up
         spy.clear()
         stack.pop();

@@ -6,8 +6,8 @@ import QtMultimedia 5.8
 
 ApplicationWindow {
     visible: true
-    width: 360
-    height: 640
+    width: 375
+    height: 667
     title: qsTr("Barbarians Rulebook")
 
     FontLoader {
@@ -25,6 +25,7 @@ ApplicationWindow {
             onGameSetupClicked: _stackView.push(_gameSetup)
             onArtworkClicked: _stackView.push(_artwork)
             onOstClicked: _stackView.push(_ost)
+            onInfoClicked: _stackView.push(_info)
 
             onVolumeClicked: _player.playbackState === Audio.PlayingState ? _player.pause() : _player.play()
         }
@@ -48,6 +49,11 @@ ApplicationWindow {
             id: _ost
             OriginalSoundTrack { player: _player }
         }
+
+        Component {
+            id: _info
+            Credits { }
+        }
     }
 
     Audio {
@@ -59,9 +65,8 @@ ApplicationWindow {
 
             playbackMode: Playlist.Loop
 
-            PlaylistItem { source: "qrc:/music/song1.mp3"; }
-            PlaylistItem { source: "qrc:/music/song2.mp3"; }
-            PlaylistItem { source: "qrc:/music/song3.mp3"; }
+            PlaylistItem { source: "qrc:/music/barbaricoro.mp3"; }
+            PlaylistItem { source: "qrc:/music/barbarimarcia2.mp3"; }
         }
 
         /* This model contains metadata about the playlist item.
@@ -70,9 +75,8 @@ ApplicationWindow {
          * than the `source`.
          */
         property ListModel metadata: ListModel {
-            ListElement { title: "Song 1" }
-            ListElement { title: "Song 2" }
-            ListElement { title: "Song 3" }
+            ListElement { title: "Barbarians' Choir" }
+            ListElement { title: "The March of Barbarians" }
         }
 
         onError: console.error(error, errorString)

@@ -1,8 +1,16 @@
 <RCC>
     <qresource prefix="/">
-        <file>assets/0-setup/cards-alpha.png</file>
-        <file>assets/0-setup/gameboard-alpha.png</file>
-        <file>assets/0-setup/player-alpha.png</file>
+        <file>assets/info/background.jpg</file>
+        <file>assets/info/background@2x.jpg</file>
+        <file>assets/info/evonove-logo.png</file>
+        <file>assets/info/tabula-logo.png</file>
+        <file>assets/ost/background.jpg</file>
+        <file>assets/ost/background@2x.jpg</file>
+        <file>assets/setup/background.jpg</file>
+        <file>assets/setup/background@2x.jpg</file>
+        <file>assets/setup/cards-alpha.png</file>
+        <file>assets/setup/gameboard-alpha.png</file>
+        <file>assets/setup/player-alpha.png</file>
         <file>assets/steps/wizard-1.png</file>
         <file>assets/steps/wizard-1-internal.png</file>
         <file>assets/steps/wizard-1-internal2.png</file>
@@ -14,8 +22,7 @@
         <file>assets/steps/wizard-7.png</file>
         <file>assets/steps/wizard-8.png</file>
         <file>assets/steps/wizard-9.png</file>
-        <file>assets/background.jpg</file>
-        <file>assets/splash-logo-bg.jpg</file>
-        <file>assets/ost-background.jpg</file>
+        <file>assets/splash-bg.png</file>
+        <file>assets/splash-bg@2x.png</file>
     </qresource>
 </RCC>

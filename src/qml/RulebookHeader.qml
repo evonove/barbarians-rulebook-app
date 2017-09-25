@@ -12,8 +12,8 @@ ToolBar {
     property int current: 0
 
     readonly property string search: "\uE8B6"
-    readonly property string formatListBulleted: "\uE241"
-    readonly property string apps: "\uE5C3"
+    readonly property string viewList: "\uE8EF"
+    readonly property string menu: "\uE5D2"
     readonly property string close: "\uE5CD"
     readonly property string navigateBefore: "\uE408"
     readonly property string navigateNext: "\uE409"
@@ -43,6 +43,23 @@ ToolBar {
         initialItem: RowLayout {
             spacing: 0
 
+            /* This button should open a menu in drawer */
+            ToolButton {
+                id: _menuButton
+                objectName: "_menuButton"
+
+                text: root.viewList
+                font: root.font
+            }
+
+            Label {
+                text: qsTr("Rulebook")
+
+                font.weight: Font.Medium
+                font.pixelSize: 20
+                Layout.leftMargin: 16
+            }
+
             Item {
                 Layout.fillWidth: true
             }
@@ -58,21 +75,12 @@ ToolBar {
                 onClicked: _headerStack.push(_searchHeader)
             }
 
-            /* This button should open a menu in drawer */
-            ToolButton {
-                id: _menuButton
-                objectName: "_menuButton"
-
-                text: root.formatListBulleted
-                font: root.font
-            }
-
             /* This button should go back to the previous page */
             ToolButton {
                 id: _backButton
                 objectName: "_backButton"
 
-                text: root.apps
+                text: root.menu
                 font: root.font
             }
         }

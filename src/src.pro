@@ -10,6 +10,7 @@ HEADERS += \
     $$PWD/utils.h
 
 RESOURCES += \
+    $$PWD/artwork.qrc \
     $$PWD/assets.qrc \
     $$PWD/music.qrc \
     $$PWD/qml.qrc \

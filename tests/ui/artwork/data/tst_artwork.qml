@@ -38,15 +38,15 @@ TestCase {
     // Verify next and prev buttons move forward and backward
     function test_next_and_prev_buttons_move_forward_and_backward() {
         stack.push(artwork);
-        compare(stack.currentItem.currentStep, 0);
+        compare(stack.currentItem.currentIndex, 0);
         // press next button
         var nextButton = findChild(stack.currentItem, "_nextButton");
         nextButton.clicked();
-        compare(stack.currentItem.currentStep, 1);
+        compare(stack.currentItem.currentIndex, 1);
         // press previous button
         var prevButton = findChild(stack.currentItem, "_prevButton");
         prevButton.clicked();
-        compare(stack.currentItem.currentStep, 0);
+        compare(stack.currentItem.currentIndex, 0);
         stack.pop();
     }
 }

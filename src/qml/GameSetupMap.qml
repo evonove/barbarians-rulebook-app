@@ -34,7 +34,7 @@ Page {
 
             Image {
                 width: parent.width; height: parent.height
-                source: "qrc:/assets/0-setup/cards-alpha.png"
+                source: "qrc:/assets/setup/cards-alpha.png"
                 smooth: false
 
                 fillMode: Image.PreserveAspectFit
@@ -58,7 +58,7 @@ Page {
             Image {
                 anchors.horizontalCenter: parent.horizontalCenter
                 height: parent.height
-                source: "qrc:/assets/0-setup/gameboard-alpha.png"
+                source: "qrc:/assets/setup/gameboard-alpha.png"
                 smooth: false
 
                 fillMode: Image.PreserveAspectFit
@@ -120,7 +120,7 @@ Page {
             Image {
                 width: parent.width; height: parent.height
                 anchors.horizontalCenter: parent.horizontalCenter
-                source: "qrc:/assets/0-setup/player-alpha.png"
+                source: "qrc:/assets/setup/player-alpha.png"
                 smooth: false
 
                 fillMode: Image.PreserveAspectFit

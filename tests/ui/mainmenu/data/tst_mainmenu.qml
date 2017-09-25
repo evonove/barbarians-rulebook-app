@@ -26,6 +26,7 @@ TestCase {
             {tag: "rulebook button", signalName: "rulebookClicked", buttonName: "_rulebookButton"},
             {tag: "artwork button", signalName: "artworkClicked", buttonName: "_artworkButton"},
             {tag: "ost button", signalName: "ostClicked", buttonName: "_ostButton"},
+            {tag: "info button", signalName: "infoClicked", buttonName: "_infoButton"},
         ];
     }
 

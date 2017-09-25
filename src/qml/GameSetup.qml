@@ -8,21 +8,31 @@ Page {
 
     // Material Icons needed by this page
     readonly property string apps: "\uE5C3"
+    readonly property string menu: "\uE5D2"
     readonly property string navigateBefore: "\uE408"
     readonly property string navigateNext: "\uE409"
 
-    /* This is the number of the step we are currently on */
-    property int currentStep: 0
+    property alias currentIndex: _swipeView.currentIndex
 
     header: ToolBar {
-        leftPadding: 16
+        leftPadding: root.currentIndex === 0 ? 16 : 0
 
         RowLayout {
             anchors.fill: parent
             spacing: 0
 
+            ToolButton {
+                text: root.apps
+                visible: root.currentIndex > 0
+
+                font.family: "Material Icons"
+                font.pixelSize: 24
+
+                onClicked: _swipeView.setCurrentIndex(0)
+            }
+
             Label {
-                text: root.currentStep === 0 ? qsTr("Game Setup") : qsTr("Wizard %1 of 9").arg(root.currentStep)
+                text: root.currentIndex === 0 ? qsTr("Game Setup") : qsTr("Wizard %1 of 9").arg(root.currentIndex)
                 elide: Text.ElideRight
 
                 font.weight: Font.Medium
@@ -36,29 +46,29 @@ Page {
             ToolButton {
                 objectName: "_prevButton"
                 text: root.navigateBefore
-                visible: root.currentStep > 0
+                visible: root.currentIndex > 0
 
                 font.family: "Material Icons"
                 font.pixelSize: 24
 
-                onClicked: root.currentStep -= 1
+                onClicked: _swipeView.decrementCurrentIndex()
             }
 
             ToolButton {
                 objectName: "_nextButton"
                 text: root.navigateNext
-                enabled: root.currentStep < 9
-                visible: root.currentStep > 0
+                enabled: root.currentIndex < 9
+                visible: root.currentIndex > 0
 
                 font.family: "Material Icons"
                 font.pixelSize: 24
 
-                onClicked: root.currentStep += 1
+                onClicked: _swipeView.incrementCurrentIndex()
             }
 
             ToolButton {
                 objectName: "_backButton"
-                text: root.apps
+                text: root.menu
                 onClicked: root.StackView.view.pop()
 
                 font.family: "Material Icons"
@@ -71,7 +81,7 @@ Page {
         anchors.fill: root
         asynchronous: true
         cache: true
-        source: "qrc:/assets/background.jpg"
+        source: "qrc:/assets/setup/background.jpg"
         fillMode: Image.PreserveAspectCrop
 
         horizontalAlignment: Image.AlignHCenter
@@ -81,17 +91,15 @@ Page {
     // The swipe view contains all the steps of the
     // setup wizard
     SwipeView {
+        id: _swipeView
         anchors.fill: parent
-        currentIndex: root.currentStep
-        onCurrentIndexChanged: root.currentStep = currentIndex
 
         Loader {
             objectName: "_mapLoader"
-            active: SwipeView.isCurrentItem || SwipeView.isPreviousItem
             asynchronous: true
 
             sourceComponent: GameSetupMap {
-                onStepClicked: root.currentStep = step
+                onStepClicked: _swipeView.setCurrentIndex(step)
             }
         }
 
@@ -100,7 +108,6 @@ Page {
             model: GameSetupModel {}
 
             Loader {
-                active: SwipeView.isCurrentItem || SwipeView.isPreviousItem || SwipeView.isNextItem
                 asynchronous: true
 
                 sourceComponent: GameSetupStep {
