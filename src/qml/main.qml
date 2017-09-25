@@ -68,6 +68,8 @@ ApplicationWindow {
             ListElement { title: "Song 2" }
             ListElement { title: "Song 3" }
         }
+
+        onError: console.error(error, errorString)
     }
 
 }

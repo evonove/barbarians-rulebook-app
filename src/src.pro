@@ -1,5 +1,5 @@
 TARGET = barbarians
-QT += qml quick webview
+QT += qml quick webview multimedia
 
 CONFIG += c++11
 
@@ -65,7 +65,7 @@ ios {
     QMAKE_INFO_PLIST = $$PWD/ios/Info.plist
 
     # application icons
-    ios_icon.files = $$files($$PWD/ios/AppIcon*.png)
+    ios_icon.files = $$files($$PWD/ios/Icon-*.png)
     QMAKE_BUNDLE_DATA += ios_icon
 
     # launch images
