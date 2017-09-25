@@ -1,5 +1,6 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.2
+import QtWebView 1.1
 
 import "components"
 
@@ -26,22 +27,66 @@ Page {
             root.StackView.view.push(_index);
         }
 
-        onBackButtonClicked: root.StackView.view.pop()
+        onBackButtonClicked: {
+            _webViewLoader.active = false;
+            root.StackView.view.pop();
+        }
+
+        onSearchTextPressed: {
+            if (Qt.platform.os === "android") {
+                _webViewLoader.active = false;
+            }
+        }
+
+        onSearchTextAccepted: {
+            if (Qt.platform.os === "android") {
+                _webViewLoader.active = true;
+                _webViewLoader.loaded.connect(function() {
+                    _webViewLoader.item.loadingChanged.connect(function (loadRequest) {
+                        if (loadRequest.status === WebView.LoadSucceededStatus) {
+                            console.log("webview loaded");
+                            _webViewLoader.item.find(text);
+                        }
+                    })
+                });
+            }
+        }
+
+        onCloseSearchButtonClicked: {
+            if (_webViewLoader.active) {
+                _webViewLoader.item.init();
+            } else {
+                _webViewLoader.active = true;
+                _webViewLoader.loaded.connect(function() {
+                    _webViewLoader.item.loadingChanged.connect(function (loadRequest) {
+                        if (loadRequest.status === WebView.LoadSucceededStatus) {
+                            console.log("webview loaded");
+                            _webViewLoader.item.init();
+                        }
+                    })
+                });
+            }
+        }
 
         onSearchTextChanged: _webViewLoader.active && _webViewLoader.item.find(text)
         onNextButtonClicked: _webViewLoader.active && _webViewLoader.item.next()
         onPrevButtonClicked: _webViewLoader.active && _webViewLoader.item.prev()
-        onCloseSearchButtonClicked: _webViewLoader.active && _webViewLoader.item.init()
     }
 
     Loader {
         id: _webViewLoader
         anchors.fill: parent
         asynchronous: true
+        visible: active && !item.loading
 
         sourceComponent: WebViewSearch {
             url: root.rulebookUrl + root.fragment
         }
+    }
+
+    BusyIndicator {
+        anchors.centerIn: parent
+        running: _webViewLoader.status !== Loader.Ready || !_webViewLoader.visible
     }
 
     Component {

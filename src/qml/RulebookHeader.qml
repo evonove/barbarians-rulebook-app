@@ -26,6 +26,9 @@ ToolBar {
     signal nextButtonClicked()
     signal searchTextChanged(string text)
 
+    signal searchTextPressed()
+    signal searchTextAccepted(string text)
+
     font.family: "Material Icons"
     font.pixelSize: 24
 
@@ -99,6 +102,9 @@ ToolBar {
 
                     placeholderText: qsTr("Find text")
                     onTextChanged: root.searchTextChanged(text)
+
+                    onPressed: root.searchTextPressed()
+                    onAccepted: root.searchTextAccepted(text)
 
                     Layout.fillWidth: true
                     Layout.fillHeight: true
