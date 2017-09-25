@@ -14,5 +14,7 @@
         <file>fonts/MaterialIcons-Regular.ttf</file>
         <file>qtquickcontrols2.conf</file>
         <file>qml/OriginalSoundTrack.qml</file>
+        <file>qml/Artwork.qml</file>
+        <file>qml/ArtworkModel.qml</file>
     </qresource>
 </RCC>

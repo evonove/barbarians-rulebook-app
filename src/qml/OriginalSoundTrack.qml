@@ -78,8 +78,6 @@ Page {
             // Getting the title from the special metadata property. See `main.qml` for more details.
             text: root.player.metadata.get(index).title
 
-            Material.theme: Material.Dark
-
             onClicked: {
                 if (playing) {
                     // When this item is playing we just pause it

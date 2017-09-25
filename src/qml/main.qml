@@ -23,6 +23,7 @@ ApplicationWindow {
 
             onRulebookClicked: _stackView.push(_rulebook)
             onGameSetupClicked: _stackView.push(_gameSetup)
+            onArtworkClicked: _stackView.push(_artwork)
             onOstClicked: _stackView.push(_ost)
 
             onVolumeClicked: _player.playbackState === Audio.PlayingState ? _player.pause() : _player.play()
@@ -36,6 +37,11 @@ ApplicationWindow {
         Component {
             id: _gameSetup
             GameSetup { }
+        }
+
+        Component {
+            id: _artwork
+            Artwork { }
         }
 
         Component {

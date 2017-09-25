@@ -17,6 +17,8 @@ Page {
     ScrollView {
         anchors.fill: parent
 
+        Material.theme: Material.Light
+
         Column {
             spacing: 16
 
