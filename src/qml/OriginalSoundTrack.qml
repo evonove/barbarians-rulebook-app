@@ -60,7 +60,6 @@ Page {
         }
     }
 
-
     /* The list of currently available tracks */
     ListView {
         anchors.fill: parent
@@ -103,21 +102,21 @@ Page {
     }
 
     footer: ToolBar {
-        leftPadding: 16
 
         RowLayout {
             anchors.fill: parent
 
             /* The label shows the title of the current selected track on the playlist
              * Title is found in the special metadata property in the player instance.
-             * See `main.qml` for more details.
-             */
+             * See `main.qml` for more details. */
             Label {
                 text: root.player.metadata.get(root.player.playlist.currentIndex).title
-                elide: Text.ElideRight
-            }
+                elide: Label.ElideRight
+                horizontalAlignment: Qt.AlignLeft
 
-            Item { Layout.fillWidth: true }
+                Layout.fillWidth: true
+                Layout.leftMargin: 16
+            }
 
             ToolButton {
                 text: root.skipPrevious
@@ -143,6 +142,16 @@ Page {
 
                 onClicked: root.player.playlist.next()
             }
+        }
+
+        ProgressBar {
+            width: parent.width
+            anchors.top: parent.top
+            from: 0
+            // duration has been added to the metadata model beacuse
+            // Qt Audio couldn't retrieve it from an mp3 file
+            to: root.player.metadata.get(root.player.playlist.currentIndex).duration
+            value: root.player.position
         }
     }
 }
