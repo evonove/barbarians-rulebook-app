@@ -61,11 +61,14 @@ Page {
         // Late pledge section
         Column {
             Layout.fillWidth: true
+            Layout.alignment: Qt.AlignTop
+            Layout.topMargin: 48
+
             spacing: 16
 
             Label {
                 width: parent.width
-                text: qsTr("Are you interested in more Barbarians game's stuff?")
+                text: qsTr("Want to buy Barbarians: The Invasion?")
                 horizontalAlignment: Text.AlignHCenter
 
                 wrapMode: Text.Wrap
@@ -86,11 +89,12 @@ Page {
         // newsletter link
         Column {
             Layout.fillWidth: true
+            Layout.alignment: Qt.AlignVCenter
             spacing: 16
 
             Label {
                 width: parent.width
-                text: qsTr("Are you interested in Barbarians?<br/>Subscribe to our newsletter")
+                text: qsTr("Interested in Barbarians: The Invasion?<br/>Subscribe to our newsletter")
                 textFormat: Text.RichText
 
                 horizontalAlignment: Text.AlignHCenter
@@ -111,52 +115,63 @@ Page {
 
         Column {
             Layout.fillWidth: true
-            spacing: 16
+            Layout.alignment: Qt.AlignBottom
+            Layout.bottomMargin: 16
+            spacing: 24
 
-            Label {
+            Column {
                 width: parent.width
-                text: qsTr("Game produced by")
-                horizontalAlignment: Text.AlignHCenter
+                spacing: 16
 
-                wrapMode: Text.Wrap
-                font.pixelSize: 16
-            }
+                Label {
+                    width: parent.width
+                    text: qsTr("Game produced by")
+                    horizontalAlignment: Text.AlignHCenter
 
-            Image {
-                anchors.horizontalCenter: parent.horizontalCenter
-                source: "/assets/info/tabula-logo.png"
-                width: 200; height: 50
-                fillMode: Image.PreserveAspectFit
-                smooth: false
+                    wrapMode: Text.Wrap
+                    font.pixelSize: 16
+                }
 
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: Qt.openUrlExternally("https://tabula.games")
+                Image {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    source: "/assets/info/tabula-logo.png"
+                    width: 200; height: 32
+                    fillMode: Image.PreserveAspectFit
+                    smooth: false
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: Qt.openUrlExternally("https://tabula.games")
+                    }
                 }
             }
 
-            Label {
+            Column {
                 width: parent.width
-                text: qsTr("App designed and Developed by")
-                horizontalAlignment: Text.AlignHCenter
+                spacing: 16
 
-                wrapMode: Text.Wrap
-                font.pixelSize: 16
-            }
+                Label {
+                    width: parent.width
+                    text: qsTr("App Designed and Developed by")
+                    horizontalAlignment: Text.AlignHCenter
 
-            Image {
-                anchors.horizontalCenter: parent.horizontalCenter
-                source: "/assets/info/evonove-logo.png"
-                width: 200; height: 50
-                fillMode: Image.PreserveAspectFit
-                smooth: false
+                    wrapMode: Text.Wrap
+                    font.pixelSize: 16
+                }
 
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: Qt.openUrlExternally("https://evonove.it")
+                Image {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    source: "/assets/info/evonove-logo.png"
+                    width: 200; height: 24
+                    fillMode: Image.PreserveAspectFit
+                    smooth: false
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: Qt.openUrlExternally("https://evonove.it")
+                    }
                 }
             }
         }
     }
-
 }
