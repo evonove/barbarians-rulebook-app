@@ -81,7 +81,7 @@ damned souls live."
     }
 
     ListElement {
-        image: "/artwork/sketch-berserker.png"
+        image: "/artwork/sketch-berserker.jpg"
         thumbnail: "/artwork/thumbnails/sketch-berserker.jpg"
         title: "Berserker"
         category: "Sketch"
