@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>music/barbaricoro.mp3</file>
         <file>music/barbarimarcia.mp3</file>
         <file>music/barbarimarcia2.mp3</file>
     </qresource>

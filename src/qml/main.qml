@@ -67,7 +67,8 @@ ApplicationWindow {
 
             PlaylistItem { source: "/music/barbarimarcia.mp3"; }
             PlaylistItem { source: "/music/barbarimarcia2.mp3"; }
-            PlaylistItem { source: "/music/barbaricoro.mp3"; }
+            PlaylistItem { source: "http://d3arfd664zftrp.cloudfront.net/barbaricoro.mp3"; }
+
         }
 
         /* This model contains metadata about the playlist item.
