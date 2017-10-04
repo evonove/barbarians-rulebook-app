@@ -37,8 +37,11 @@ Pane {
         id: _info
         width: parent.width; height: parent.height
 
-        Item {
+        ScrollView {
             width: parent.width; height: parent.height
+
+            contentWidth: parent.width
+            contentHeight: _category.height + _title.height + _description.height + 76
 
             anchors.top: parent.top; anchors.topMargin: 32
             anchors.left: parent.left; anchors.leftMargin: 16
