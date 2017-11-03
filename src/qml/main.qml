@@ -65,9 +65,8 @@ ApplicationWindow {
 
             playbackMode: Playlist.Loop
 
-            PlaylistItem { source: "/music/barbarimarcia.mp3"; }
-            PlaylistItem { source: "/music/barbarimarcia2.mp3"; }
-            PlaylistItem { source: "http://d3arfd664zftrp.cloudfront.net/barbaricoro.mp3"; }
+            PlaylistItem { source: "/music/01_marcia_barbari.mp3"; }
+            PlaylistItem { source: "/music/02_coro_barbari.mp3"; }
 
         }
 
@@ -77,9 +76,8 @@ ApplicationWindow {
          * than the `source`.
          */
         property ListModel metadata: ListModel {
-            ListElement { title: "The March of Barbarians - Part 1"; duration: 368040 }
-            ListElement { title: "The March of Barbarians - Part 2"; duration: 360097 }
-            ListElement { title: "Barbarians' Choir"; duration: 312083 }
+            ListElement { title: "The March of Barbarians"; duration: 368040 }
+            ListElement { title: "Barbarians' Choir"; duration: 314880 }
         }
 
         onError: console.error(error, errorString)
