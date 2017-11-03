@@ -29,9 +29,6 @@ ToolBar {
     signal searchTextPressed()
     signal searchTextAccepted(string text)
 
-    font.family: "Material Icons"
-    font.pixelSize: 24
-
     /* This toolbar is managed as a stackview because we show
      * other actions when the user clicks on the search button */
     StackView {
@@ -49,7 +46,9 @@ ToolBar {
                 objectName: "_menuButton"
 
                 text: root.viewList
-                font: root.font
+
+                font.family: "Material Icons"
+                font.pixelSize: 24
             }
 
             Label {
@@ -70,7 +69,9 @@ ToolBar {
                 objectName: "_searchButton"
 
                 text: root.search
-                font: root.font
+
+                font.family: "Material Icons"
+                font.pixelSize: 24
 
                 onClicked: _headerStack.push(_searchHeader)
             }
@@ -81,7 +82,8 @@ ToolBar {
                 objectName: "_backButton"
 
                 text: root.menu
-                font: root.font
+                font.family: "Material Icons"
+                font.pixelSize: 24
             }
         }
 
@@ -100,7 +102,9 @@ ToolBar {
                     objectName: "_closeSearchButton"
 
                     text: root.close
-                    font: root.font
+
+                    font.family: "Material Icons"
+                    font.pixelSize: 24
 
                     onClicked: _headerStack.pop();
                 }
@@ -122,8 +126,10 @@ ToolBar {
                     objectName: "_prevButton"
 
                     text: root.navigateBefore
-                    font: root.font
                     enabled: root.total > 0
+
+                    font.family: "Material Icons"
+                    font.pixelSize: 24
                 }
 
                 Label {
@@ -137,8 +143,10 @@ ToolBar {
                     objectName: "_nextButton"
 
                     text: root.navigateNext
-                    font: root.font
                     enabled: root.total > 0
+
+                    font.family: "Material Icons"
+                    font.pixelSize: 24
                 }
 
                 Component.onCompleted: {

@@ -60,7 +60,7 @@ Page {
                 _webViewLoader.loaded.connect(function() {
                     _webViewLoader.item.loadingChanged.connect(function (loadRequest) {
                         if (loadRequest.status === WebView.LoadSucceededStatus) {
-                            console.log("webview loaded");
+                            console.debug("webview loaded");
                             _webViewLoader.item.init();
                         }
                     })
