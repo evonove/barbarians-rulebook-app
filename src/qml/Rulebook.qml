@@ -4,6 +4,7 @@ import QtWebView 1.1
 
 import "components"
 
+
 Page {
     id: root
 
@@ -13,6 +14,8 @@ Page {
     /* The fragment property is used to navigate through
      * the sections of the rulebook page. */
     property string fragment: ""
+
+    property string pendingSearch: ""
 
     padding: 0
 
@@ -39,32 +42,18 @@ Page {
         }
 
         onSearchTextAccepted: {
+            root.pendingSearch = text;
             if (Qt.platform.os === "android") {
                 _webViewLoader.active = true;
-                _webViewLoader.loaded.connect(function() {
-                    _webViewLoader.item.loadingChanged.connect(function (loadRequest) {
-                        if (loadRequest.status === WebView.LoadSucceededStatus) {
-                            console.log("webview loaded");
-                            _webViewLoader.item.find(text);
-                        }
-                    })
-                });
             }
         }
 
         onCloseSearchButtonClicked: {
+            root.pendingSearch = "";
             if (_webViewLoader.active) {
                 _webViewLoader.item.init();
             } else {
                 _webViewLoader.active = true;
-                _webViewLoader.loaded.connect(function() {
-                    _webViewLoader.item.loadingChanged.connect(function (loadRequest) {
-                        if (loadRequest.status === WebView.LoadSucceededStatus) {
-                            console.debug("webview loaded");
-                            _webViewLoader.item.init();
-                        }
-                    })
-                });
             }
         }
 
@@ -81,6 +70,31 @@ Page {
 
         sourceComponent: WebViewSearch {
             url: root.rulebookUrl + root.fragment
+        }
+
+        onLoaded: {
+            // This piece of code solve some issues related to the loading and unloading
+            // of the webview in android systems (that is necessary because of issues with
+            // the native webview on android).
+            if (Qt.platform.os === "android") {
+                // when the webview (here is the `item` of the loader)
+                // is loaded with success we act on the page
+                _webViewLoader.item.loadingChanged.connect(function (loadRequest) {
+                    if (loadRequest.status === WebView.LoadSucceededStatus) {
+                        // first we init the javascript used to search in the page
+                        console.debug("webview loaded");
+                        _webViewLoader.item.init();
+
+                        // if there is a pendingSearch we perform that search
+                        // in order to get results
+                        if (root.pendingSearch) {
+                            console.debug("pending search perform");
+
+                            _webViewLoader.item.find(root.pendingSearch);
+                        }
+                    }
+                })
+            }
         }
     }
 
