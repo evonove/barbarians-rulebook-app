@@ -145,6 +145,7 @@ ul {
 .rulebook,
 .rulebook_expansion,
 .rulebook_reference,
+.rulebook_cards,
 .rulebook_credits {
   background-size: 100% 100%;
   padding: 4.236rem 1.618rem;
@@ -394,6 +395,16 @@ ul {
   list-style-type: none;
   padding: 0;
   text-align: center;
+}
+
+/* Cards list
+ ***************/
+.cards_list {
+  padding-left: 0;
+}
+
+.cards_list > li {
+  list-style-type: none;
 }
 
 
