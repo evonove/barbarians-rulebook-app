@@ -19,8 +19,6 @@ Page {
 
     padding: 0
 
-    Keys.onPressed: console.log("rulebook", event, event.text)
-
     header: RulebookHeader {
         total: _webViewLoader.active ? _webViewLoader.item.elementsFound : 0
         current: _webViewLoader.active ? _webViewLoader.item.currentElement : 0
