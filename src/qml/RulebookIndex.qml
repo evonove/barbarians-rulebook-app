@@ -110,6 +110,7 @@ Page {
         ListElement { title: qsTr("Expansion Components"); level: "top"; fragment: "#expansion_components" }
 
         ListElement { title: qsTr("Reference"); level: "top"; fragment: "#reference" }
+        ListElement { title: qsTr("Cards Reference"); level: "top"; fragment: "#cards_reference" }
 
         ListElement { title: qsTr("Credits"); level: "top"; fragment: "#credits" }
     }
