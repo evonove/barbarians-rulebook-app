@@ -35,6 +35,7 @@ Page {
             Item { Layout.fillWidth: true }
 
             ToolButton {
+                objectName: "_menuButton"
                 text: root.menu
                 onClicked: root.menuClicked()
 
@@ -46,6 +47,7 @@ Page {
 
     GridView {
         id: _grid
+        objectName: "_grid"
 
         anchors.fill: parent
 

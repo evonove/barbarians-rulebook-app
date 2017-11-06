@@ -30,23 +30,8 @@ TestCase {
         stack.push(artwork);
         compare(stack.currentItem.objectName, "artwork");
         // get the back button and click on it
-        var backButton = findChild(stack.currentItem, "_backButton");
+        var backButton = findChild(stack.currentItem, "_menuButton");
         backButton.clicked();
         compare(stack.currentItem.objectName, "page");
-    }
-
-    // Verify next and prev buttons move forward and backward
-    function test_next_and_prev_buttons_move_forward_and_backward() {
-        stack.push(artwork);
-        compare(stack.currentItem.currentIndex, 0);
-        // press next button
-        var nextButton = findChild(stack.currentItem, "_nextButton");
-        nextButton.clicked();
-        compare(stack.currentItem.currentIndex, 1);
-        // press previous button
-        var prevButton = findChild(stack.currentItem, "_prevButton");
-        prevButton.clicked();
-        compare(stack.currentItem.currentIndex, 0);
-        stack.pop();
     }
 }
