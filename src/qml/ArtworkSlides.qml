@@ -18,6 +18,14 @@ Page {
 
     property alias currentIndex: _swipeView.currentIndex
 
+    Keys.onPressed: {
+        console.log("artwork slides", event, event.text);
+        if (event.key === Qt.Key_Escape || event.key === Qt.Key_Back) {
+            root.StackView.view.pop();
+            event.accepted = true;
+        }
+    }
+
     header: ToolBar {
         RowLayout {
             anchors.fill: parent

@@ -14,6 +14,9 @@ Page {
 
     property alias currentIndex: _swipeView.currentIndex
 
+    Keys.onPressed: console.log("game setup main", event, event.text)
+    Keys.forwardTo: [_swipeView.currentItem.item]
+
     header: ToolBar {
         leftPadding: root.currentIndex === 0 ? 16 : 0
 
@@ -115,6 +118,7 @@ Page {
                     title: model.title
                     content: model.index === 0 ? model.content.arg(_step.availableWidth) : model.content
                     mainImageSource: model.image
+                    onBack: _swipeView.setCurrentIndex(0)
                 }
             }
         }

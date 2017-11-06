@@ -7,6 +7,8 @@ WebView {
     property int elementsFound: 0
     property int currentElement: 0
 
+    Keys.onPressed: console.log("rulebook", event, event.text)
+
     function init() {
         root.elementsFound = 0;
         root.currentElement = 0;

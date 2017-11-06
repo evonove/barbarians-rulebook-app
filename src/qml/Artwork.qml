@@ -5,6 +5,9 @@ import QtQuick.Controls 2.2
 Page {
     id: root
 
+    Keys.forwardTo: [_stackView.currentItem]
+    Keys.onPressed: console.log("artwork main", event, event.text)
+
     StackView {
         id: _stackView
         anchors.fill: parent

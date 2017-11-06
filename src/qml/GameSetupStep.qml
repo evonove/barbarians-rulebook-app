@@ -5,14 +5,25 @@ import QtQuick.Layouts 1.3
 
 Page {
     id: root
-    padding: 16
+
+    signal back()
 
     property alias mainImageSource: _mainImage.source
     property alias content: _content.text
 
+    padding: 16
+
     // we need a transparent background because it is set on
     // the main GameSetup page
     Material.background: "transparent"
+
+    Keys.onPressed: {
+        console.log("game setup step", event, event.text);
+        if (event.key === Qt.Key_Escape || event.key === Qt.Key_Back) {
+            root.back();
+            event.accepted = true;
+        }
+    }
 
     ScrollView {
         anchors.fill: parent

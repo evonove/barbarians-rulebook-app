@@ -14,9 +14,23 @@ ApplicationWindow {
         source: "qrc:/fonts/MaterialIcons-Regular.ttf"
     }
 
+    onActiveFocusControlChanged: console.debug("current focus", activeFocusControl)
+
     StackView {
         id: _stackView
         anchors.fill: parent
+        focus: true
+
+        Keys.forwardTo: [_stackView.currentItem]
+        Keys.onPressed: {
+            console.log("main", event);
+            if (event.key === Qt.Key_Escape || event.key === Qt.Key_Back) {
+                if (_stackView.depth > 1) {
+                    _stackView.pop();
+                    event.accepted = true;
+                }
+            }
+        }
 
         initialItem: MainMenu {
             musicIsPlaying: _player.playbackState === Audio.PlayingState
