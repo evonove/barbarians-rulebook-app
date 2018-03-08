@@ -68,18 +68,18 @@ Page {
 
             Label {
                 width: parent.width
-                text: qsTr("Want to buy Barbarians: The Invasion?")
+                text: qsTr("Check out our latest Kickstarter game!")
                 horizontalAlignment: Text.AlignHCenter
 
                 wrapMode: Text.Wrap
                 font.pixelSize: 16
             }
             Button {
-                text: qsTr("Late Pledge")
+                text: qsTr("Live Now")
                 anchors.horizontalCenter: parent.horizontalCenter
                 font.weight: Font.DemiBold
 
-                onClicked: Qt.openUrlExternally("https://app.crowdox.com/projects/tabulagames/barbarians-the-invasion")
+                onClicked: Qt.openUrlExternally("https://www.kickstarter.com/projects/tabulagames/mysthea?ref=9lfzaj")
 
                 Material.foreground: Material.color(Material.Grey, Material.Shade900)
                 Material.background: Material.color(Material.Amber, Material.Shade200)
