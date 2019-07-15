@@ -10,17 +10,17 @@ The application is available on the Google Play and on the Apple App Store
 
 # Build the project
 
-The project has been developed on Linux on Ubuntu 17.04.
+The project has been developed on Linux on Ubuntu 19.04.
 
 The application has been tested and runs smoothly on the following platforms:
 
-* Linux (Ubuntu 17.04)
-* macOS Sierra
+* Linux (Ubuntu 19.04)
+* macOS Mojave
 * Android 5.0 and above
-* iOS 9 and above
+* iOS 12 and above
 
 ## Requirements
 
-* Qt 5.9.2
+* Qt 5.13.0
 
 Open the project with QtCreator and run the `src` target.

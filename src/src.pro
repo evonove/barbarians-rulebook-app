@@ -57,9 +57,37 @@ android {
         $$PWD/android/build.gradle
 
     ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+
+    # This is needed to automate version code increment for 54bit builds
+    # Reference: https://blog.qt.io/blog/2019/06/28/comply-upcoming-requirements-google-play/
+    defineReplace(droidVersionCode) {
+        segments = $$split(1, ".")
+        for (segment, segments): vCode = "$$first(vCode)$$format_number($$segment, width=3 zeropad)"
+
+        contains(ANDROID_TARGET_ARCH, arm64-v8a): \
+            suffix = 1
+        else:contains(ANDROID_TARGET_ARCH, armeabi-v7a): \
+            suffix = 0
+        # add more cases as needed
+
+        return($$first(vCode)$$first(suffix))
+    }
+
+    # To upgrade the version change the following variable
+    VERSION = 1.2.0
+
+    ANDROID_VERSION_NAME = $$VERSION
+    ANDROID_VERSION_CODE = $$droidVersionCode($$ANDROID_VERSION_NAME)
+
 }
 
 ios {
+    # To upgrade the version change the following variable
+    VERSION = 1.2.0
+
+    QMAKE_TARGET_BUNDLE_PREFIX = it.evonove
+    QMAKE_BUNDLE = barbarians
+
     OTHER_FILES += $$PWD/ios/*
 
     # Add a custom plist
