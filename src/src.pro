@@ -16,6 +16,9 @@ RESOURCES += \
     $$PWD/qml.qrc \
     $$PWD/pages.qrc
 
+QTQUICK_COMPILER_SKIPPED_RESOURCES += $$PWD/pages.qrc
+QTQUICK_COMPILER_RETAINED_RESOURCES += $$PWD/pages.qrc
+
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
 
@@ -46,6 +49,8 @@ OTHER_FILES += \
     $$PWD/qml/*.qml \
     $$PWD/qml/components/*.qml
 
+# To upgrade the version change the following variable
+VERSION = 1.2.0
 
 android {
     QT += androidextras
@@ -73,18 +78,11 @@ android {
         return($$first(vCode)$$first(suffix))
     }
 
-    # To upgrade the version change the following variable
-    VERSION = 1.2.0
-
     ANDROID_VERSION_NAME = $$VERSION
     ANDROID_VERSION_CODE = $$droidVersionCode($$ANDROID_VERSION_NAME)
-
 }
 
 ios {
-    # To upgrade the version change the following variable
-    VERSION = 1.2.0
-
     QMAKE_TARGET_BUNDLE_PREFIX = it.evonove
     QMAKE_BUNDLE = barbarians
 

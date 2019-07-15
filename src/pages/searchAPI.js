@@ -1,5 +1,4 @@
 (function (root) {
-
     var container = document.getElementById('container');
     var warning = document.getElementById('warning');
 

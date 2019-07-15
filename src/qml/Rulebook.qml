@@ -35,25 +35,14 @@ Page {
             root.StackView.view.pop();
         }
 
-        onSearchTextPressed: {
-            if (Qt.platform.os === "android") {
-                _webViewLoader.active = false;
-            }
-        }
-
         onSearchTextAccepted: {
             root.pendingSearch = text;
-            if (Qt.platform.os === "android") {
-                _webViewLoader.active = true;
-            }
         }
 
         onCloseSearchButtonClicked: {
             root.pendingSearch = "";
             if (_webViewLoader.active) {
                 _webViewLoader.item.init();
-            } else {
-                _webViewLoader.active = true;
             }
         }
 
