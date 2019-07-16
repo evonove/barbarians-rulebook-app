@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <manifest package="it.evonove.barbarians" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="-- %%INSERT_VERSION_NAME%% --" android:versionCode="-- %%INSERT_VERSION_CODE%% --" android:installLocation="auto">
-    <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="Barbarians: The Invasion Compendium" android:icon="@mipmap/ic_launcher">
+    <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="Barbarians: The Invasion Compendium" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" >
         <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation" android:name="it.evonove.qt5.BarbariansActivity" android:label="Barbarians: The Invasion Compendium" android:screenOrientation="portrait" android:launchMode="singleTop" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
