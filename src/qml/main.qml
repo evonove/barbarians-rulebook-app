@@ -3,8 +3,11 @@ import QtQuick.Controls 2.2
 
 import QtMultimedia 5.8
 
+import System 1.0
+
 
 ApplicationWindow {
+    id: root
     visible: true
     width: 375
     height: 667
@@ -12,6 +15,17 @@ ApplicationWindow {
 
     FontLoader {
         source: "qrc:/fonts/MaterialIcons-Regular.ttf"
+    }
+
+    // A top margin added to various components so that they're not covered
+    // by the iPhone top notch
+    property real safeTopMargin: 0
+    property real safeBottomMargin: 0
+
+    Component.onCompleted: {
+        let margins = System.getSafeAreaMargins(root)
+        root.safeTopMargin =  margins.top
+        root.safeBottomMargin = margins.bottom
     }
 
     onActiveFocusControlChanged: console.debug("current focus", activeFocusControl)
@@ -33,6 +47,9 @@ ApplicationWindow {
         }
 
         initialItem: MainMenu {
+            safeBottomMargin: root.safeBottomMargin
+            safeTopMargin: root.safeTopMargin
+
             musicIsPlaying: _player.playbackState === Audio.PlayingState
 
             onRulebookClicked: _stackView.push(_rulebook)
@@ -46,27 +63,45 @@ ApplicationWindow {
 
         Component {
             id: _rulebook
-            Rulebook { rulebookUrl: baseUrl }
+            Rulebook {
+                rulebookUrl: baseUrl
+                safeBottomMargin: root.safeBottomMargin
+                safeTopMargin: root.safeTopMargin
+            }
         }
 
         Component {
             id: _gameSetup
-            GameSetup { }
+            GameSetup {
+                safeBottomMargin: root.safeBottomMargin
+                safeTopMargin: root.safeTopMargin
+            }
         }
 
         Component {
             id: _artwork
-            Artwork { }
+            Artwork {
+                safeBottomMargin: root.safeBottomMargin
+                safeTopMargin: root.safeTopMargin
+            }
         }
 
         Component {
             id: _ost
-            OriginalSoundTrack { player: _player }
+            OriginalSoundTrack {
+                safeBottomMargin: root.safeBottomMargin
+                safeTopMargin: root.safeTopMargin
+
+                player: _player
+            }
         }
 
         Component {
             id: _info
-            Credits { }
+            Credits {
+                safeBottomMargin: root.safeBottomMargin
+                safeTopMargin: root.safeTopMargin
+            }
         }
     }
 

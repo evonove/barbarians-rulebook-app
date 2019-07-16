@@ -4,7 +4,7 @@ import QtQuick.Controls.Material 2.2
 import QtQuick.Layouts 1.3
 
 
-Page {
+BasePage {
     id: root
 
     // Material Icons needed by this page
@@ -14,6 +14,8 @@ Page {
 
 
     header: ToolBar {
+        topPadding: root.safeTopMargin
+
         RowLayout {
             anchors.fill: parent
             spacing: 0
@@ -57,6 +59,7 @@ Page {
     ColumnLayout {
         id: _layout
         anchors.fill: parent
+        anchors.bottomMargin: root.safeBottomMargin
 
         // Late pledge section
         Column {

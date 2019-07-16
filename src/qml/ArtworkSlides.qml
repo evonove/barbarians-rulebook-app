@@ -3,8 +3,7 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 
 
-
-Page {
+BasePage {
     id: root
 
     signal appsClicked()
@@ -27,6 +26,8 @@ Page {
     }
 
     header: ToolBar {
+        topPadding: root.safeTopMargin
+
         RowLayout {
             anchors.fill: parent
             spacing: 0

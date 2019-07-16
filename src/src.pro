@@ -1,13 +1,15 @@
 TARGET = barbarians
-QT += qml quick webview multimedia
+QT += qml quick gui-private webview multimedia
 
 CONFIG += c++11
 
 SOURCES += \
-    $$PWD/main.cpp
+    $$PWD/main.cpp \
+    $$PWD/system.cpp
 
 HEADERS += \
-    $$PWD/utils.h
+    $$PWD/utils.h \
+    $$PWD/system.h
 
 RESOURCES += \
     $$PWD/artwork.qrc \
@@ -91,12 +93,11 @@ ios {
     # Add a custom plist
     QMAKE_INFO_PLIST = $$PWD/ios/Info.plist
 
-    # launch images
-    launchimages.files = $$files($$PWD/ios/LaunchImage*.png)
-    QMAKE_BUNDLE_DATA += launchimages
-
     # App assets
     QMAKE_ASSET_CATALOGS = $$PWD/ios/Images.xcassets
     QMAKE_ASSET_CATALOGS_APP_ICON = "AppIcon"
     QMAKE_ASSET_CATALOGS_LAUNCH_IMAGE = "LaunchImage"
 }
+
+DISTFILES += \
+    qml/BasePage.qml

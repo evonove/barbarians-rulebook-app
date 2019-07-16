@@ -2,7 +2,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.2
 
 
-Page {
+BasePage {
     id: root
 
     Keys.forwardTo: [_stackView.currentItem]
@@ -13,6 +13,9 @@ Page {
         anchors.fill: parent
 
         initialItem: ArtworkGrid {
+            safeTopMargin: root.safeTopMargin
+            safeBottomMargin: root.safeBottomMargin
+
             model: _artworkModel
 
             onThumbClicked: _stackView.push(_artworkSlides, { currentIndex: index })
@@ -28,6 +31,9 @@ Page {
         id: _artworkSlides
 
         ArtworkSlides {
+            safeTopMargin: root.safeTopMargin
+            safeBottomMargin: root.safeBottomMargin
+
             model: _artworkModel
 
             onMenuClicked: root.StackView.view.pop()

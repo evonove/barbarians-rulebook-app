@@ -3,7 +3,7 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 
 
-Page {
+BasePage {
     id: root
 
     signal thumbClicked(int index)
@@ -21,6 +21,7 @@ Page {
     leftPadding: 4; rightPadding: 0
 
     header: ToolBar {
+        topPadding: root.safeTopMargin
         leftPadding: 16
 
         RowLayout {

@@ -5,7 +5,7 @@ import QtWebView 1.1
 import "components"
 
 
-Page {
+BasePage {
     id: root
 
     /* The URI to the rulebook html page */
@@ -20,6 +20,9 @@ Page {
     padding: 0
 
     header: RulebookHeader {
+        height: implicitHeight + root.safeTopMargin
+        topPadding: root.safeTopMargin
+
         total: _webViewLoader.active ? _webViewLoader.item.elementsFound : 0
         current: _webViewLoader.active ? _webViewLoader.item.currentElement : 0
 

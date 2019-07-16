@@ -5,6 +5,7 @@
         <file>qml/ArtworkModel.qml</file>
         <file>qml/ArtworkSlideDelegate.qml</file>
         <file>qml/ArtworkSlides.qml</file>
+        <file>qml/BasePage.qml</file>
         <file>qml/Credits.qml</file>
         <file>qml/GameSetup.qml</file>
         <file>qml/GameSetupMap.qml</file>

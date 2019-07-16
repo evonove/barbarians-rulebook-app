@@ -4,7 +4,7 @@ import QtQuick.Controls.Material 2.2
 import QtQuick.Layouts 1.3
 
 
-Page {
+BasePage {
     id: root
 
     /* This property changes the icon shown
@@ -114,7 +114,8 @@ Page {
 
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-        anchors.margins: 16
+        anchors.rightMargin: 16
+        anchors.bottomMargin: Math.max(16, root.safeBottomMargin)
 
         text: root.musicIsPlaying ? volumeOn : volumeOff
 

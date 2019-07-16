@@ -8,7 +8,7 @@ import QtGraphicalEffects 1.0
 Pane {
     id: root
 
-    property url image: null
+    property url image
     property string title: ""
     property string category: ""
     property string description: ""

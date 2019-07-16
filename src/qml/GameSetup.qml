@@ -3,7 +3,7 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 
 
-Page {
+BasePage {
     id: root
 
     // Material Icons needed by this page
@@ -18,6 +18,7 @@ Page {
     Keys.forwardTo: [_swipeView.currentItem.item]
 
     header: ToolBar {
+        topPadding: root.safeTopMargin
         leftPadding: root.currentIndex === 0 ? 16 : 0
 
         RowLayout {
@@ -96,6 +97,7 @@ Page {
     SwipeView {
         id: _swipeView
         anchors.fill: parent
+        anchors.bottomMargin: root.safeBottomMargin
 
         Loader {
             objectName: "_mapLoader"
@@ -105,7 +107,6 @@ Page {
                 onStepClicked: _swipeView.setCurrentIndex(step)
             }
         }
-
 
         Repeater {
             model: GameSetupModel {}

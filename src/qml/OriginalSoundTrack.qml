@@ -6,7 +6,7 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.8
 
 
-Page {
+BasePage {
     id: root
 
     // Material Icons needed by this page
@@ -31,7 +31,8 @@ Page {
     }
 
     header: ToolBar {
-       leftPadding: 16
+        topPadding: root.safeTopMargin
+        leftPadding: 16
 
         RowLayout {
             anchors.fill: parent
@@ -102,6 +103,8 @@ Page {
     }
 
     footer: ToolBar {
+        height: implicitHeight + root.safeBottomMargin
+        bottomPadding: root.safeBottomMargin
 
         RowLayout {
             anchors.fill: parent
@@ -112,7 +115,7 @@ Page {
             Label {
                 text: root.player.metadata.get(root.player.playlist.currentIndex).title
                 elide: Label.ElideRight
-                horizontalAlignment: Qt.AlignLeft
+                horizontalAlignment: Qt.AlignLeft | Qt.AlignTop
 
                 Layout.fillWidth: true
                 Layout.leftMargin: 16
