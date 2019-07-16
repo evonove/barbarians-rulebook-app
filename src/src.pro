@@ -58,10 +58,21 @@ android {
     QT += androidextras
 
     OTHER_FILES += \
-        $$PWD/android/res/drawable/* \
-        $$PWD/android/res/values/* \
+        $$PWD/android/src/it/evonove/qt5/* \
         $$PWD/android/AndroidManifest.xml \
-        $$PWD/android/build.gradle
+        $$PWD/android/build.gradle \
+        $$PWD/android/gradle/wrapper/gradle-wrapper.jar \
+        $$PWD/android/gradle/wrapper/gradle-wrapper.properties \
+        $$PWD/android/gradlew \
+        $$PWD/android/gradlew.bat \
+        $$PWD/android/res/values/* \
+        $$PWD/android/res/values-v21/* \
+        $$PWD/android/res/mipmap-hdpi/* \
+        $$PWD/android/res/mipmap-mdpi/* \
+        $$PWD/android/res/mipmap-xhdpi/* \
+        $$PWD/android/res/mipmap-xxhdpi/* \
+        $$PWD/android/res/mipmap-xxxhdpi/* \
+        $$PWD/android/res/drawable/*
 
     ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 
@@ -88,7 +99,11 @@ ios {
     QMAKE_TARGET_BUNDLE_PREFIX = it.evonove
     QMAKE_BUNDLE = barbarians
 
-    OTHER_FILES += $$PWD/ios/*
+    OTHER_FILES += \
+        $$PWD/ios/* \
+        $$PWD/ios/Images.xcassets \
+        $$PWD/ios/Images.xcassets/AppIcon.appiconset \
+        $$PWD/ios/Images.xcassets/LaunchImage.launchimage
 
     # Add a custom plist
     QMAKE_INFO_PLIST = $$PWD/ios/Info.plist
@@ -98,6 +113,3 @@ ios {
     QMAKE_ASSET_CATALOGS_APP_ICON = "AppIcon"
     QMAKE_ASSET_CATALOGS_LAUNCH_IMAGE = "LaunchImage"
 }
-
-DISTFILES += \
-    qml/BasePage.qml
