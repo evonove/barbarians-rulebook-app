@@ -20,20 +20,6 @@ BasePage {
             anchors.fill: parent
             spacing: 0
 
-            Label {
-                text: qsTr("Info")
-                elide: Text.ElideRight
-
-                font.weight: Font.Medium
-                font.pixelSize: 20
-
-                Layout.leftMargin: 16
-            }
-
-            Item {
-                Layout.fillWidth: true
-            }
-
             ToolButton {
                 objectName: "_backButton"
                 text: root.menu
@@ -41,6 +27,20 @@ BasePage {
 
                 font.family: "Material Icons"
                 font.pixelSize: 24
+            }
+
+            Label {
+                text: qsTr("Info")
+                elide: Text.ElideRight
+
+                font.weight: Font.Medium
+                font.pixelSize: 20
+
+                Layout.leftMargin: 8
+            }
+
+            Item {
+                Layout.fillWidth: true
             }
         }
     }

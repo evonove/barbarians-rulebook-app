@@ -19,20 +19,19 @@ BasePage {
 
     header: ToolBar {
         topPadding: root.safeTopMargin
-        leftPadding: root.currentIndex === 0 ? 16 : 0
+        leftPadding: 0
 
         RowLayout {
             anchors.fill: parent
             spacing: 0
 
             ToolButton {
-                text: root.apps
-                visible: root.currentIndex > 0
+                objectName: "_backButton"
+                text: root.menu
+                onClicked: root.StackView.view.pop()
 
                 font.family: "Material Icons"
                 font.pixelSize: 24
-
-                onClicked: _swipeView.setCurrentIndex(0)
             }
 
             Label {
@@ -41,6 +40,8 @@ BasePage {
 
                 font.weight: Font.Medium
                 font.pixelSize: 20
+
+                Layout.leftMargin: 8
             }
 
             Item {
@@ -71,12 +72,13 @@ BasePage {
             }
 
             ToolButton {
-                objectName: "_backButton"
-                text: root.menu
-                onClicked: root.StackView.view.pop()
+                text: root.apps
+                visible: root.currentIndex > 0
 
                 font.family: "Material Icons"
                 font.pixelSize: 24
+
+                onClicked: _swipeView.setCurrentIndex(0)
             }
         }
     }

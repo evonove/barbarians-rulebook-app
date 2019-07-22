@@ -32,23 +32,11 @@ BasePage {
 
     header: ToolBar {
         topPadding: root.safeTopMargin
-        leftPadding: 16
+        leftPadding: 0
 
         RowLayout {
             anchors.fill: parent
             spacing: 0
-
-            Label {
-                text: qsTr("Soundtrack")
-                elide: Text.ElideRight
-
-                font.weight: Font.Medium
-                font.pixelSize: 20
-            }
-
-            Item {
-                Layout.fillWidth: true
-            }
 
             ToolButton {
                 objectName: "_backButton"
@@ -58,6 +46,21 @@ BasePage {
                 font.family: "Material Icons"
                 font.pixelSize: 24
             }
+
+            Label {
+                text: qsTr("Soundtrack")
+                elide: Text.ElideRight
+
+                font.weight: Font.Medium
+                font.pixelSize: 20
+
+                Layout.leftMargin: 8
+            }
+
+            Item {
+                Layout.fillWidth: true
+            }
+
         }
     }
 

@@ -33,27 +33,6 @@ BasePage {
             spacing: 0
 
             ToolButton {
-                text: root.apps
-
-                font.family: "Material Icons"
-                font.pixelSize: 24
-
-                onClicked: root.StackView.view.pop()
-            }
-
-            Label {
-                text: qsTr("Artwork")
-                elide: Text.ElideRight
-
-                font.weight: Font.Medium
-                font.pixelSize: 20
-            }
-
-            Item {
-                Layout.fillWidth: true
-            }
-
-            ToolButton {
                 objectName: "_backButton"
                 text: root.menu
 
@@ -62,6 +41,30 @@ BasePage {
 
                 onClicked: root.menuClicked()
             }
+
+            Label {
+                text: qsTr("Artwork")
+                elide: Text.ElideRight
+
+                font.weight: Font.Medium
+                font.pixelSize: 20
+
+                Layout.leftMargin: 8
+            }
+
+            Item {
+                Layout.fillWidth: true
+            }
+
+            ToolButton {
+                text: root.apps
+
+                font.family: "Material Icons"
+                font.pixelSize: 24
+
+                onClicked: root.StackView.view.pop()
+            }
+
         }
     }
 

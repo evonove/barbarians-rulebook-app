@@ -40,13 +40,12 @@ ToolBar {
         initialItem: RowLayout {
             spacing: 0
 
-            /* This button should open a menu in drawer */
+            /* This button should go back to the previous page */
             ToolButton {
-                id: _menuButton
-                objectName: "_menuButton"
+                id: _backButton
+                objectName: "_backButton"
 
-                text: root.viewList
-
+                text: root.menu
                 font.family: "Material Icons"
                 font.pixelSize: 24
             }
@@ -56,7 +55,7 @@ ToolBar {
 
                 font.weight: Font.Medium
                 font.pixelSize: 20
-                Layout.leftMargin: 16
+                Layout.leftMargin: 8
             }
 
             Item {
@@ -76,12 +75,13 @@ ToolBar {
                 onClicked: _headerStack.push(_searchHeader)
             }
 
-            /* This button should go back to the previous page */
+            /* This button should open a menu in drawer */
             ToolButton {
-                id: _backButton
-                objectName: "_backButton"
+                id: _menuButton
+                objectName: "_menuButton"
 
-                text: root.menu
+                text: root.viewList
+
                 font.family: "Material Icons"
                 font.pixelSize: 24
             }
