@@ -4,8 +4,8 @@
              on Android 8.0, otherwise splash screen do not disappear -->
         <item name="android:windowBackground">@drawable/splash</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor" tools:targetApi="21">@color/status</item>
-        <item name="android:navigationBarColor" tools:targetApi="21">@color/status</item>
+        <item name="android:statusBarColor" tools:targetApi="21">@color/back</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/back</item>
     </style>
 
     <style name="BarbariansTheme" parent="@android:style/Theme.Holo.Light">
