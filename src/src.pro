@@ -100,10 +100,8 @@ ios {
     QMAKE_BUNDLE = barbarians
 
     OTHER_FILES += \
-        $$PWD/ios/* \
-        $$PWD/ios/Images.xcassets \
-        $$PWD/ios/Images.xcassets/AppIcon.appiconset \
-        $$PWD/ios/Images.xcassets/LaunchImage.launchimage
+        $$PWD/ios/Images.xcassets/AppIcon.appiconset/* \
+        $$PWD/ios/Images.xcassets/LaunchImage.launchimage/*
 
     # Add a custom plist
     QMAKE_INFO_PLIST = $$PWD/ios/Info.plist
