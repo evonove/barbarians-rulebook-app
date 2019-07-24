@@ -12,6 +12,7 @@ ApplicationWindow {
     width: 375
     height: 667
     title: qsTr("Barbarians Rulebook")
+    flags: Qt.Window | Qt.MaximizeUsingFullscreenGeometryHint
 
     FontLoader {
         source: "qrc:/fonts/MaterialIcons-Regular.ttf"
