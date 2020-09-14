@@ -51,11 +51,10 @@ OTHER_FILES += \
     $$PWD/qml/*.qml \
     $$PWD/qml/components/*.qml
 
-# To upgrade the version change the following variable
-VERSION = 1.2.0
-
 android {
     QT += androidextras
+    # To upgrade the version change the following variable
+    VERSION = 1.2.1
 
     OTHER_FILES += \
         $$PWD/android/src/it/evonove/qt5/* \
@@ -96,6 +95,9 @@ android {
 }
 
 ios {
+    # To upgrade the version change the following variable
+    VERSION = 1.2.0
+
     QMAKE_TARGET_BUNDLE_PREFIX = it.evonove
     QMAKE_BUNDLE = barbarians
 
