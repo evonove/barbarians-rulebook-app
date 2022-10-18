@@ -1,2 +1,2 @@
-#include <QtQuickTest/quicktest.h>
-QUICK_TEST_MAIN(rulebookindex)
+// #include <QtQuickTest/quicktest.h>
+// QUICK_TEST_MAIN(rulebookindex)

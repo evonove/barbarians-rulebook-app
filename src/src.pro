@@ -15,11 +15,7 @@ RESOURCES += \
     $$PWD/artwork.qrc \
     $$PWD/assets.qrc \
     $$PWD/music.qrc \
-    $$PWD/qml.qrc \
-    $$PWD/pages.qrc
-
-QTQUICK_COMPILER_SKIPPED_RESOURCES += $$PWD/pages.qrc
-QTQUICK_COMPILER_RETAINED_RESOURCES += $$PWD/pages.qrc
+    $$PWD/qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -38,9 +34,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-pagesFolder.source = pages
-DEPLOYMENTFOLDERS += pagesFolder
-
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
@@ -54,7 +47,7 @@ OTHER_FILES += \
 android {
     QT += androidextras
     # To upgrade the version change the following variable
-    VERSION = 1.2.1
+    VERSION = 1.2.3
 
     OTHER_FILES += \
         $$PWD/android/src/it/evonove/qt5/* \

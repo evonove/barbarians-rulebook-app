@@ -10,7 +10,6 @@
 #endif
 
 #include "system.h"
-#include "utils.h"
 
 static QObject *
 system_manager_singletontype_provider(QQmlEngine *engine,
@@ -38,10 +37,7 @@ int main(int argc, char *argv[])
         "System", 1, 0, "System",
         system_manager_singletontype_provider);
 
-    // copy resource related to the web view to a local directory
-    // this is needed because WebView doesn't support loading from qrc
-    auto destination = copyHtmlResourcesToDataLocation(":/pages/");
-    auto baseUrl = QUrl::fromLocalFile(QFileInfo(destination + "/pages/rulebook.html").absoluteFilePath());
+    auto baseUrl = QUrl("https://storage.googleapis.com/barbarians-app/pages/rulebook.html");
 
     // if wanted, set the QML webview URL
     auto* context = engine.rootContext();
